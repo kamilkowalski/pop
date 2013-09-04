@@ -3,17 +3,22 @@ $background-light: #FFFFFF;
 $background-dark: #000000;
 $background-header: #E33F30;
 $background-header-light: #EB6E65;
+$background-submenu: #E0E0E0;
+$background-submenu-light: #FFFFFF;
+$background-submenu-dark: #C7C5C5;
 
 $text-light: #FFFFFF;
-$text-dark: #333333;
-$text-faded: #777777;
+$text-dark: #555555;
+$text-faded: #999999;
 
 // Sizes
 $header-height: 54px;
 $header-font-size: 18px;
 $menu-font-size: 13px;
+$submenu-font-size: 13px;
+$submenu-height: 54px;
 $body-font-size: 13px;
-$pop-width: 700px;
+$pop-width: 900px;
 
 @mixin fade {
   -webkit-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.2s linear;
@@ -48,6 +53,23 @@ $pop-width: 700px;
   }
 }
 
+@mixin menu {
+  @include clearfix;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+   > li {
+    display: block;
+    float: left;
+
+    a, a:visited, a:active {
+      padding: 0 10px;
+      display: inline-block;
+    }
+  }
+}
+
 .pop {
   @include fullscreen;
   position: fixed;
@@ -60,7 +82,7 @@ $pop-width: 700px;
     @include clearfix;
     @include box-shadow(0 0 15px 5px rgba(0, 0, 0, 0.2));
     background-color: $background-light;
-    width: 800px;
+    max-width: $pop-width;
     right: auto;
     left: 50%;
     margin: 15px auto;
@@ -73,6 +95,7 @@ $pop-width: 700px;
 
       > * {
         float: right;
+        display: block;
         height: $header-height;
       }
 
@@ -85,34 +108,25 @@ $pop-width: 700px;
       }
 
       > .pop-menu {
-        > ul {
-          @include clearfix;
-          list-style-type: none;
-          margin: 0;
-          font-size: $menu-font-size;
+        @include menu;
+        font-size: $menu-font-size;
 
-          > li {
-            display: block;
-            float: left;
-
-            a, a:visited, a:active {
-              @include fade;
-              color: $text-light;
-              text-decoration: none;
-              line-height: $header-height;
-              padding: 0 10px;
-              display: inline-block;
-              border-right: 1px solid $background-header-light;
-            }
-
-            a:hover {
-              background-color: $background-header-light;
-            }
+        > li {
+          a, a:visited, a:active {
+            @include fade;
+            color: $text-light;
+            text-decoration: none;
+            line-height: $header-height;
+            border-right: 1px solid $background-header-light;
           }
 
-          > li:first-child a {
-            border-left: 1px solid $background-header-light;
+          a:hover {
+            background-color: $background-header-light;
           }
+        }
+
+        > li:first-child a {
+          border-left: 1px solid $background-header-light;
         }
       }
 
@@ -130,6 +144,36 @@ $pop-width: 700px;
 
         &:hover {
           opacity: 0.6;
+        }
+      }
+    }
+
+    > .pop-submenu {
+      @include menu;
+      font-size: $submenu-font-size;
+      height: $submenu-height;
+      background-color: $background-submenu;
+
+      > li {
+        a, a:visited, a:active {
+          @include fade;
+          color: $text-dark;
+          text-decoration: none;
+          line-height: $submenu-height;
+          border-right: 1px solid $background-submenu-dark;
+        }
+
+        a:hover {
+          background-color: $background-submenu-dark;
+        }
+
+        &.active a {
+          background-color: $background-submenu-light;
+          border-right-color: $background-submenu-light;
+
+          &:hover {
+            background-color: $background-submenu-light;
+          }
         }
       }
     }
