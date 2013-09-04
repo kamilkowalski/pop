@@ -1,0 +1,150 @@
+// Colors
+$background-light: #FFFFFF;
+$background-dark: #000000;
+$background-header: #E33F30;
+$background-header-light: #EB6E65;
+
+$text-light: #FFFFFF;
+$text-dark: #333333;
+$text-faded: #777777;
+
+// Sizes
+$header-height: 54px;
+$header-font-size: 18px;
+$menu-font-size: 13px;
+$body-font-size: 13px;
+$pop-width: 700px;
+
+@mixin fade {
+  -webkit-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.2s linear;
+     -moz-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.2s linear;
+       -o-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.2s linear;
+          transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.2s linear;
+}
+
+@mixin fullscreen {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin box-shadow($vars...) {
+  -webkit-box-shadow: $vars;
+     -moz-box-shadow: $vars;
+          box-shadow: $vars;
+}
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.pop {
+  @include fullscreen;
+  position: fixed;
+  z-index: 1080;
+  overflow: auto;
+  overflow-y: scroll;
+
+  > .pop-dialog {
+    @include fade;
+    @include clearfix;
+    @include box-shadow(0 0 15px 5px rgba(0, 0, 0, 0.2));
+    background-color: $background-light;
+    width: 800px;
+    right: auto;
+    left: 50%;
+    margin: 15px auto;
+    z-index: 1090;
+
+    > .pop-head {
+      @include clearfix;
+      background-color: $background-header;
+      color: $text-light;
+
+      > * {
+        float: right;
+        height: $header-height;
+      }
+
+      > .pop-title {
+        line-height: $header-height;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: $header-font-size;
+        float: left;
+      }
+
+      > .pop-menu {
+        > ul {
+          @include clearfix;
+          list-style-type: none;
+          margin: 0;
+          font-size: $menu-font-size;
+
+          > li {
+            display: block;
+            float: left;
+
+            a, a:visited, a:active {
+              @include fade;
+              color: $text-light;
+              text-decoration: none;
+              line-height: $header-height;
+              padding: 0 10px;
+              display: inline-block;
+              border-right: 1px solid $background-header-light;
+            }
+
+            a:hover {
+              background-color: $background-header-light;
+            }
+          }
+
+          > li:first-child a {
+            border-left: 1px solid $background-header-light;
+          }
+        }
+      }
+
+      > .pop-close {
+        @include fade;
+        color: $text-dark;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: $header-height;
+        padding: 0 18px;
+        opacity: 0.3;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+.pop-open {
+  overflow: hidden;
+}
+
+.pop-backdrop {
+  @include fade;
+  @include fullscreen;
+  background-color: $background-dark;
+  opacity: 0.7;
+  position: fixed;
+  z-index: 1070;
+}
