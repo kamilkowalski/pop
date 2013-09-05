@@ -13,9 +13,6 @@ $background-body: #F5F5F5;
 $background-body-light: #FFFFFF;
 $background-body-dark: #A1A1A1;
 
-$background-scrollbar: #CCCCCC;
-$background-scrollbar-handle: #A1A1A1;
-
 $text-light: #FFFFFF;
 $text-dark: #555555;
 $text-faded: #999999;
@@ -28,8 +25,6 @@ $submenu-font-size: 13px;
 $submenu-height: 54px;
 $body-font-size: 13px;
 $pop-width: 900px;
-$scrollbar-width: 5px;
-$scrollbar-handle-height: 10px;
 
 @mixin fade {
   -webkit-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.1s linear;
