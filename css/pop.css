@@ -7,7 +7,7 @@
   position: fixed;
   z-index: 1080;
   overflow: auto;
-  overflow-y: scroll; }
+  overflow-y: auto; }
   .pop > .pop-dialog {
     -webkit-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.1s linear;
     -moz-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.1s linear;
@@ -47,7 +47,7 @@
         height: 54px; }
       .pop > .pop-dialog > .pop-head > .pop-title {
         line-height: 54px;
-        margin-left: 10px;
+        margin-left: 20px;
         font-weight: bold;
         font-size: 18px;
         float: left; }
@@ -102,7 +102,7 @@
         display: block; }
         .pop > .pop-dialog > .pop-head > .pop-close:hover {
           opacity: 0.6; }
-    .pop > .pop-dialog > .pop-submenu {
+    .pop > .pop-dialog > .pop-output > .pop-submenu {
       *zoom: 1;
       list-style-type: none;
       margin: 0;
@@ -110,18 +110,18 @@
       font-size: 13px;
       height: 54px;
       background-color: #e0e0e0; }
-      .pop > .pop-dialog > .pop-submenu:before, .pop > .pop-dialog > .pop-submenu:after {
+      .pop > .pop-dialog > .pop-output > .pop-submenu:before, .pop > .pop-dialog > .pop-output > .pop-submenu:after {
         content: " ";
         display: table; }
-      .pop > .pop-dialog > .pop-submenu:after {
+      .pop > .pop-dialog > .pop-output > .pop-submenu:after {
         clear: both; }
-      .pop > .pop-dialog > .pop-submenu > li {
+      .pop > .pop-dialog > .pop-output > .pop-submenu > li {
         display: block;
         float: left; }
-        .pop > .pop-dialog > .pop-submenu > li a, .pop > .pop-dialog > .pop-submenu > li a:visited, .pop > .pop-dialog > .pop-submenu > li a:active {
+        .pop > .pop-dialog > .pop-output > .pop-submenu > li a, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:visited, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:active {
           padding: 0 15px;
           display: inline-block; }
-      .pop > .pop-dialog > .pop-submenu > li a, .pop > .pop-dialog > .pop-submenu > li a:visited, .pop > .pop-dialog > .pop-submenu > li a:active {
+      .pop > .pop-dialog > .pop-output > .pop-submenu > li a, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:visited, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:active {
         -webkit-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.1s linear;
         -moz-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.1s linear;
         -o-transition: opacity 0.3s linear, top 0.3s ease-out, background-color 0.1s linear;
@@ -130,16 +130,16 @@
         text-decoration: none;
         line-height: 54px;
         border-right: 1px solid #c7c5c5; }
-      .pop > .pop-dialog > .pop-submenu > li a:hover {
+      .pop > .pop-dialog > .pop-output > .pop-submenu > li a:hover {
         background-color: #c7c5c5; }
-      .pop > .pop-dialog > .pop-submenu > li.active a {
+      .pop > .pop-dialog > .pop-output > .pop-submenu > li.active a {
         background-color: white;
         border-right-color: white; }
-        .pop > .pop-dialog > .pop-submenu > li.active a:hover {
+        .pop > .pop-dialog > .pop-output > .pop-submenu > li.active a:hover {
           background-color: white; }
-    .pop > .pop-dialog > .pop-main {
+    .pop > .pop-dialog > .pop-output > .pop-main {
       font-size: 13px; }
-      .pop > .pop-dialog > .pop-main .pop-scrollable {
+      .pop > .pop-dialog > .pop-output > .pop-main .pop-scrollable {
         overflow: auto;
         height: 100%; }
   .pop.pop-flex > .pop-dialog {
@@ -183,6 +183,7 @@
     .pop-messages > .pop-sidebar > ul {
       list-style-type: none;
       margin: 10px;
+      margin-right: 0;
       padding: 0; }
       .pop-messages > .pop-sidebar > ul a, .pop-messages > .pop-sidebar > ul a:visited, .pop-messages > .pop-sidebar > ul a:active {
         *zoom: 1;
@@ -205,11 +206,32 @@
         .pop-messages > .pop-sidebar > ul a strong, .pop-messages > .pop-sidebar > ul a:visited strong, .pop-messages > .pop-sidebar > ul a:active strong {
           display: block; }
       .pop-messages > .pop-sidebar > ul a:hover {
+        background-color: #dddddd; }
+      .pop-messages > .pop-sidebar > ul > li.active a {
         background-color: whitesmoke; }
   .pop-messages .pop-body {
-    width: 66.66666%; }
-    .pop-messages .pop-body .pop-contents {
+    width: 66.66666%;
+    background-color: whitesmoke; }
+    .pop-messages .pop-body ul.pop-conversation {
       margin: 10px;
       padding: 10px;
-      background-color: whitesmoke;
-      border-bottom: 1px solid #a1a1a1; }
+      display: table;
+      border-collapse: collapse;
+      list-style-type: none; }
+      .pop-messages .pop-body ul.pop-conversation > li {
+        border-top: 1px solid #dddddd;
+        display: table-row; }
+        .pop-messages .pop-body ul.pop-conversation > li:first-child {
+          border-top: 0 none; }
+        .pop-messages .pop-body ul.pop-conversation > li > * {
+          display: table-cell;
+          vertical-align: top; }
+        .pop-messages .pop-body ul.pop-conversation > li > .avatar {
+          padding: 10px 10px 0 0; }
+        .pop-messages .pop-body ul.pop-conversation > li > .text {
+          padding: 10px 10px 10px 0; }
+          .pop-messages .pop-body ul.pop-conversation > li > .text > .name {
+            font-weight: bold; }
+          .pop-messages .pop-body ul.pop-conversation > li > .text > .date {
+            color: #999999;
+            font-size: 90%; }
