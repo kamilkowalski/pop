@@ -10,122 +10,148 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/pop.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/demo.css">
+ 
+        <link href="sh/styles/shCore.css" rel="stylesheet" type="text/css" />
+        <link href="sh/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
 
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
     </head>
-    <body class="pop-open">
-        <h1>WebOrg modal/popup plugin</h1>
+    <body>
+        <h1>Pop - the new modal/popup plugin for WebOrg</h1>
         <p>This is the new WebOrg modal/popup plugin that will be used on the front page of every WebOrg instance.</p>
         <p>The usage is pretty simple and requires minimal configuration. There are several ways of opening a new modal and adding content to it.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, nobis, excepturi, corporis, modi laboriosam rerum similique voluptates dicta animi voluptate sequi dignissimos illo reprehenderit nihil culpa ut saepe in fugit!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, repudiandae velit obcaecati asperiores itaque quaerat placeat. Sapiente tempora magni illum maiores aut sequi asperiores quas ipsum nulla ad? Dolor, fugit.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, provident itaque nam consequuntur explicabo unde velit error repellendus est eligendi minus ratione dolor! Praesentium, tempore deleniti totam saepe rerum mollitia.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, nobis, excepturi, corporis, modi laboriosam rerum similique voluptates dicta animi voluptate sequi dignissimos illo reprehenderit nihil culpa ut saepe in fugit!</p>
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, repudiandae velit obcaecati asperiores itaque quaerat placeat. Sapiente tempora magni illum maiores aut sequi asperiores quas ipsum nulla ad? Dolor, fugit.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, provident itaque nam consequuntur explicabo unde velit error repellendus est eligendi minus ratione dolor! Praesentium, tempore deleniti totam saepe rerum mollitia.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, nobis, excepturi, corporis, modi laboriosam rerum similique voluptates dicta animi voluptate sequi dignissimos illo reprehenderit nihil culpa ut saepe in fugit!</p>
+        
+        <h2>Pre-rendered modal, triggered via JavaScript</h2>
 
-        <div class="pop">
+        <h3>HTML:</h3>
+        <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+        <button id="showPop1">Show it</button>
+
+        <div class="pop" id="myPop1">
             <div class="pop-dialog">
                 <div class="pop-head">
-                    <div class="pop-title">Meldingssenter</div>
+                    <div class="pop-title">Title</div>
                     <a href="#" class="pop-close" data-close="true">&times;</a>
                     <ul class="pop-menu">
-                        <li><a href="#">Min kalender</a></li>
-                        <li><a href="#">Mine medlemskap</a></li>
-                        <li><a href="#">Instillinger</a></li>
-                        <li><a href="#">Betalhistorikk</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
                     </ul>
                 </div>
                 <div class="pop-output">
                     <ul class="pop-submenu">
-                        <li class="active"><a href="#">Private meldinger</a></li>
-                        <li><a href="#">Vegg</a></li>
+                        <li class="active"><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
                     </ul>
-                    <div class="pop-main pop-messages">
-                        <div class="pop-sidebar pop-scrollable">
-                            <ul class="contacts">
-                                <li><a href="#">
-                                        <img src="http://www.placecage.com/50/50" alt="John Malkovic">
-                                        <div><strong>John Malkovic</strong> Lorem ipsum dolor sit amet</div>
-                                    </a>
-                                </li>
-                               <li class="active"><a href="#">
-                                        <img src="http://www.placecage.com/50/50" alt="John Malkovic">
-                                        <div><strong>John Malkovic</strong> Lorem ipsum dolor sit amet</div>
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://www.placecage.com/50/50" alt="John Malkovic">
-                                        <div><strong>John Malkovic</strong> Lorem ipsum dolor sit amet</div>
-                                    </a>
-                                </li>
-                                <li><a href="#">
-                                        <img src="http://www.placecage.com/50/50" alt="John Malkovic">
-                                        <div><strong>John Malkovic</strong> Lorem ipsum dolor sit amet</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pop-body pop-scrollable">
-                            <ul class="pop-conversation">
-                                <li>
-                                    <div class="avatar"><img src="http://www.placecage.com/50/50" alt="Johnny Mnemonic"></div>
-                                    <div class="text">
-                                        <span class="name">Johnny Mnemonic</span>
-                                        <span class="date">September 4, 2013</span>
-                                        <p class="message">Hello there, Johnny! Did you know, that in the United States, dates are traditionally written in the "month day, year" order, that is, in neither descending nor ascending order of significance.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="avatar"><img src="http://www.placecage.com/50/50" alt="Johnny Mnemonic"></div>
-                                    <div class="text">
-                                        <span class="name">Johnny Mnemonic</span>
-                                        <span class="date">September 4, 2013</span>
-                                        <p class="message">Hello there, Johnny! Did you know, that in the United States, dates are traditionally written in the "month day, year" order, that is, in neither descending nor ascending order of significance.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="avatar"><img src="http://www.placecage.com/50/50" alt="Johnny Mnemonic"></div>
-                                    <div class="text">
-                                        <span class="name">Johnny Mnemonic</span>
-                                        <span class="date">September 4, 2013</span>
-                                        <p class="message">Hello there, Johnny! Did you know, that in the United States, dates are traditionally written in the "month day, year" order, that is, in neither descending nor ascending order of significance.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="avatar"><img src="http://www.placecage.com/50/50" alt="Johnny Mnemonic"></div>
-                                    <div class="text">
-                                        <span class="name">Johnny Mnemonic</span>
-                                        <span class="date">September 4, 2013</span>
-                                        <p class="message">Hello there, Johnny! Did you know, that in the United States, dates are traditionally written in the "month day, year" order, that is, in neither descending nor ascending order of significance.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="avatar"><img src="http://www.placecage.com/50/50" alt="Johnny Mnemonic"></div>
-                                    <div class="text">
-                                        <span class="name">Johnny Mnemonic</span>
-                                        <span class="date">September 4, 2013</span>
-                                        <p class="message">Hello there, Johnny! Did you know, that in the United States, dates are traditionally written in the "month day, year" order, that is, in neither descending nor ascending order of significance.</p>
-                                    </div>
-                                </li>
-                            </ul>
+                    <div class="pop-main">
+                        <div class="pop-body">
+                            Main body
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
-        <div class="pop-backdrop"></div>
+        </script>
+
+        <h3>JavaScript:</h3>
+        <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+        // JavaScript
+        $("#showPop1").on("click", function(){
+            $("#myPop1").pop("show");
+        });
+        ]]></script>
+
+        <h3>Demo:</h3>
+        <button id="showPop1">Show it</button>
+
+        <div class="pop" id="myPop1">
+            <div class="pop-dialog">
+                <div class="pop-head">
+                    <div class="pop-title">Title</div>
+                    <a href="#" class="pop-close" data-close="true">&times;</a>
+                    <ul class="pop-menu">
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                    </ul>
+                </div>
+                <div class="pop-output">
+                    <ul class="pop-submenu">
+                        <li class="active"><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                    </ul>
+                    <div class="pop-main">
+                        <div class="pop-body">
+                            Main body
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Pre-rendered modal, triggered via JavaScript and filled with AJAX-loaded content</h2>
+        
+        <h3>HTML:</h3>
+        <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+        <button id="showPop2">Load it</button>
+
+        <div class="pop" id="myPop2">
+            <div class="pop-dialog">
+                <div class="pop-head">
+                    <div class="pop-title">Title</div>
+                    <a href="#" class="pop-close" data-close="true">&times;</a>
+                    <ul class="pop-menu">
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                    </ul>
+                </div>
+                <div class="pop-output">
+                    
+                </div>
+            </div>
+        </div>
+        </script>
+
+        <h3>JavaScript:</h3>
+        <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+        // JavaScript
+        $("#showPop2").on("click", function(){
+            $("#myPop2").pop("show", {load: "ajax_contents.html"});
+        });
+        ]]></script>
+
+        <h3>Demo:</h3>
+        <button id="showPop2">Load it</button>
+
+        <div class="pop" id="myPop2">
+            <div class="pop-dialog">
+                <div class="pop-head">
+                    <div class="pop-title">Title</div>
+                    <a href="#" class="pop-close" data-close="true">&times;</a>
+                    <ul class="pop-menu">
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                    </ul>
+                </div>
+                <div class="pop-output">
+                    
+                </div>
+            </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
+        
+        <script src="js/jquery.pop.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript" src="sh/scripts/shCore.js"></script>
+        <script type="text/javascript" src="sh/scripts/shBrushJScript.js"></script>
+        <script type="text/javascript" src="sh/scripts/shBrushXml.js"></script>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+        </script>
     </body>
 </html>
