@@ -48,6 +48,9 @@
     setTimeout($.proxy(function(){
       this.$backdrop.addClass("in").attr("aria-hidden", false);
       this.$element.addClass("in").attr("aria-hidden", false);
+      if(this.$element.hasClass("pop-flex")){
+        $(window).trigger("resize");
+      }
     }, that), 0);
 
     $(document.body).addClass("pop-open");
