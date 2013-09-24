@@ -13,150 +13,188 @@
   overflow: auto;
   overflow-y: auto;
   display: none;
-  opacity: 0; }
-  .pop.in {
-    opacity: 1; }
+  opacity: 0;
+}
+.pop.in {
+  opacity: 1;
+}
+.pop > .pop-dialog {
+  -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  *zoom: 1;
+  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  max-width: 900px;
+  overflow: hidden;
+  right: auto;
+  left: 50%;
+  margin: 20px auto;
+  z-index: 1090;
+}
+.pop > .pop-dialog:before, .pop > .pop-dialog:after {
+  content: " ";
+  display: table;
+}
+.pop > .pop-dialog:after {
+  clear: both;
+}
+@media screen and (max-width: 900px) {
   .pop > .pop-dialog {
-    -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-    -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-    -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-    transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-    *zoom: 1;
-    -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    max-width: 900px;
-    overflow: hidden;
-    right: auto;
-    left: 50%;
-    margin: 20px auto;
-    z-index: 1090; }
-    .pop > .pop-dialog:before, .pop > .pop-dialog:after {
-      content: " ";
-      display: table; }
-    .pop > .pop-dialog:after {
-      clear: both; }
-    @media screen and (max-width: 900px) {
-      .pop > .pop-dialog {
-        margin: 0 auto; } }
-    .pop > .pop-dialog > .pop-head {
-      *zoom: 1;
-      background-color: #e33f30;
-      color: white; }
-      .pop > .pop-dialog > .pop-head:before, .pop > .pop-dialog > .pop-head:after {
-        content: " ";
-        display: table; }
-      .pop > .pop-dialog > .pop-head:after {
-        clear: both; }
-      .pop > .pop-dialog > .pop-head > * {
-        float: right;
-        display: block;
-        height: 54px; }
-      .pop > .pop-dialog > .pop-head > .pop-title {
-        line-height: 54px;
-        margin-left: 20px;
-        font-weight: bold;
-        font-size: 18px;
-        float: left; }
-      .pop > .pop-dialog > .pop-head > .pop-menu {
-        *zoom: 1;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        font-size: 13px; }
-        .pop > .pop-dialog > .pop-head > .pop-menu:before, .pop > .pop-dialog > .pop-head > .pop-menu:after {
-          content: " ";
-          display: table; }
-        .pop > .pop-dialog > .pop-head > .pop-menu:after {
-          clear: both; }
-        .pop > .pop-dialog > .pop-head > .pop-menu > li {
-          display: block;
-          float: left; }
-          .pop > .pop-dialog > .pop-head > .pop-menu > li a, .pop > .pop-dialog > .pop-head > .pop-menu > li a:visited, .pop > .pop-dialog > .pop-head > .pop-menu > li a:active {
-            padding: 0 15px;
-            display: inline-block; }
-        .pop > .pop-dialog > .pop-head > .pop-menu > li a, .pop > .pop-dialog > .pop-head > .pop-menu > li a:visited, .pop > .pop-dialog > .pop-head > .pop-menu > li a:active {
-          -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-          -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-          -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-          transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-          color: white;
-          text-decoration: none;
-          line-height: 54px;
-          border-right: 1px solid #eb6e65; }
-        .pop > .pop-dialog > .pop-head > .pop-menu > li a:hover {
-          background-color: #eb6e65; }
-        .pop > .pop-dialog > .pop-head > .pop-menu > li:first-child a {
-          border-left: 1px solid #eb6e65; }
-        @media screen and (max-width: 730px) {
-          .pop > .pop-dialog > .pop-head > .pop-menu {
-            clear: both;
-            float: none;
-            border-top: 1px solid #eb6e65; } }
-      .pop > .pop-dialog > .pop-head > .pop-close {
-        -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        color: #555555;
-        font-size: 30px;
-        font-weight: bold;
-        line-height: 54px;
-        padding: 0 18px;
-        opacity: 0.3;
-        cursor: pointer;
-        text-decoration: none;
-        display: block; }
-        .pop > .pop-dialog > .pop-head > .pop-close:hover {
-          opacity: 0.6; }
-    .pop > .pop-dialog > .pop-output > .pop-submenu {
-      *zoom: 1;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      font-size: 13px;
-      height: 54px;
-      background-color: #e0e0e0; }
-      .pop > .pop-dialog > .pop-output > .pop-submenu:before, .pop > .pop-dialog > .pop-output > .pop-submenu:after {
-        content: " ";
-        display: table; }
-      .pop > .pop-dialog > .pop-output > .pop-submenu:after {
-        clear: both; }
-      .pop > .pop-dialog > .pop-output > .pop-submenu > li {
-        display: block;
-        float: left; }
-        .pop > .pop-dialog > .pop-output > .pop-submenu > li a, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:visited, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:active {
-          padding: 0 15px;
-          display: inline-block; }
-      .pop > .pop-dialog > .pop-output > .pop-submenu > li a, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:visited, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:active {
-        -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        color: #555555;
-        text-decoration: none;
-        line-height: 54px;
-        border-right: 1px solid #c7c5c5; }
-      .pop > .pop-dialog > .pop-output > .pop-submenu > li a:hover {
-        background-color: #c7c5c5; }
-      .pop > .pop-dialog > .pop-output > .pop-submenu > li.active a {
-        background-color: white;
-        border-right-color: white; }
-        .pop > .pop-dialog > .pop-output > .pop-submenu > li.active a:hover {
-          background-color: white; }
-    .pop > .pop-dialog > .pop-output > .pop-main {
-      font-size: 13px; }
-      .pop > .pop-dialog > .pop-output > .pop-main .pop-scrollable {
-        overflow: auto;
-        height: 100%; }
-      .pop > .pop-dialog > .pop-output > .pop-main > .pop-body {
-        padding: 10px; }
-  .pop.pop-flex > .pop-dialog {
-    height: 90%; }
+    margin: 0 auto;
+  }
+}
+.pop > .pop-dialog > .pop-head {
+  *zoom: 1;
+  background-color: #e33f30;
+  color: white;
+}
+.pop > .pop-dialog > .pop-head:before, .pop > .pop-dialog > .pop-head:after {
+  content: " ";
+  display: table;
+}
+.pop > .pop-dialog > .pop-head:after {
+  clear: both;
+}
+.pop > .pop-dialog > .pop-head > * {
+  float: right;
+  display: block;
+  height: 54px;
+}
+.pop > .pop-dialog > .pop-head > .pop-title {
+  line-height: 54px;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  float: left;
+}
+.pop > .pop-dialog > .pop-head > .pop-menu {
+  *zoom: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+.pop > .pop-dialog > .pop-head > .pop-menu:before, .pop > .pop-dialog > .pop-head > .pop-menu:after {
+  content: " ";
+  display: table;
+}
+.pop > .pop-dialog > .pop-head > .pop-menu:after {
+  clear: both;
+}
+.pop > .pop-dialog > .pop-head > .pop-menu > li {
+  display: block;
+  float: left;
+}
+.pop > .pop-dialog > .pop-head > .pop-menu > li a, .pop > .pop-dialog > .pop-head > .pop-menu > li a:visited, .pop > .pop-dialog > .pop-head > .pop-menu > li a:active {
+  padding: 0 15px;
+  display: inline-block;
+}
+.pop > .pop-dialog > .pop-head > .pop-menu > li a, .pop > .pop-dialog > .pop-head > .pop-menu > li a:visited, .pop > .pop-dialog > .pop-head > .pop-menu > li a:active {
+  -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  color: white;
+  text-decoration: none;
+  line-height: 54px;
+  border-right: 1px solid #eb6e65;
+}
+.pop > .pop-dialog > .pop-head > .pop-menu > li a:hover {
+  background-color: #eb6e65;
+}
+.pop > .pop-dialog > .pop-head > .pop-menu > li:first-child a {
+  border-left: 1px solid #eb6e65;
+}
+@media screen and (max-width: 730px) {
+  .pop > .pop-dialog > .pop-head > .pop-menu {
+    clear: both;
+    float: none;
+    border-top: 1px solid #eb6e65;
+  }
+}
+.pop > .pop-dialog > .pop-head > .pop-close {
+  -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  color: #555555;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 54px;
+  padding: 0 18px;
+  opacity: 0.3;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+.pop > .pop-dialog > .pop-head > .pop-close:hover {
+  opacity: 0.6;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu {
+  *zoom: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  height: 54px;
+  background-color: #e0e0e0;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu:before, .pop > .pop-dialog > .pop-output > .pop-submenu:after {
+  content: " ";
+  display: table;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu:after {
+  clear: both;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu > li {
+  display: block;
+  float: left;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu > li a, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:visited, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:active {
+  padding: 0 15px;
+  display: inline-block;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu > li a, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:visited, .pop > .pop-dialog > .pop-output > .pop-submenu > li a:active {
+  -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  color: #555555;
+  text-decoration: none;
+  line-height: 54px;
+  border-right: 1px solid #c7c5c5;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu > li a:hover {
+  background-color: #c7c5c5;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu > li.active a {
+  background-color: white;
+  border-right-color: white;
+}
+.pop > .pop-dialog > .pop-output > .pop-submenu > li.active a:hover {
+  background-color: white;
+}
+.pop > .pop-dialog > .pop-output > .pop-main {
+  font-size: 13px;
+}
+.pop > .pop-dialog > .pop-output > .pop-main .pop-scrollable {
+  overflow: auto;
+  height: 100%;
+}
+.pop > .pop-dialog > .pop-output > .pop-main > .pop-body {
+  padding: 10px;
+}
+.pop.pop-flex > .pop-dialog {
+  height: 90%;
+}
 
 .pop-open {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .pop-backdrop {
   -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
@@ -170,81 +208,232 @@
   background-color: black;
   opacity: 0;
   position: fixed;
-  z-index: 1070; }
-  .pop-backdrop.in {
-    opacity: 0.7; }
+  z-index: 1070;
+}
+.pop-backdrop.in {
+  opacity: 0.7;
+}
 
 .pop > .pop-dialog > .pop-output > .pop-messages {
   *zoom: 1;
-  width: 100%; }
-  .pop > .pop-dialog > .pop-output > .pop-messages:before, .pop > .pop-dialog > .pop-output > .pop-messages:after {
-    content: " ";
-    display: table; }
-  .pop > .pop-dialog > .pop-output > .pop-messages:after {
-    clear: both; }
-  .pop > .pop-dialog > .pop-output > .pop-messages > * {
-    float: left; }
-  .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar {
-    *zoom: 1;
-    width: 33.33333%; }
-    .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar:before, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar:after {
-      content: " ";
-      display: table; }
-    .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar:after {
-      clear: both; }
-    .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul {
-      list-style-type: none;
-      margin: 10px;
-      margin-right: 0;
-      padding: 0; }
-      .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active {
-        *zoom: 1;
-        -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
-        display: block;
-        padding: 10px;
-        color: #555555;
-        text-decoration: none; }
-        .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:before, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:after, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited:before, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited:after, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active:before, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active:after {
-          content: " ";
-          display: table; }
-        .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:after, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited:after, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active:after {
-          clear: both; }
-        .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a img, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited img, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active img {
-          float: left;
-          margin-right: 5px; }
-        .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a strong, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited strong, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active strong {
-          display: block; }
-      .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:hover {
-        background-color: #dddddd; }
-      .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul > li.active a {
-        background-color: whitesmoke; }
-  .pop > .pop-dialog > .pop-output > .pop-messages .pop-body {
-    width: 66.66666%;
-    background-color: whitesmoke;
-    padding: 0; }
-    .pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation {
-      margin: 10px;
-      padding: 10px;
-      display: table;
-      border-collapse: collapse;
-      list-style-type: none; }
-      .pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li {
-        border-top: 1px solid #dddddd;
-        display: table-row; }
-        .pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li:first-child {
-          border-top: 0 none; }
-        .pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > * {
-          display: table-cell;
-          vertical-align: top; }
-        .pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > .avatar {
-          padding: 10px 10px 0 0; }
-        .pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > .text {
-          padding: 10px 10px 10px 0; }
-          .pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > .text > .name {
-            font-weight: bold; }
-          .pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > .text > .date {
-            color: #999999;
-            font-size: 90%; }
+  width: 100%;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages:before, .pop > .pop-dialog > .pop-output > .pop-messages:after {
+  content: " ";
+  display: table;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages:after {
+  clear: both;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > * {
+  float: left;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar {
+  *zoom: 1;
+  width: 33.33333%;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar:before, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar:after {
+  content: " ";
+  display: table;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar:after {
+  clear: both;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul {
+  list-style-type: none;
+  margin: 10px;
+  margin-right: 0;
+  padding: 0;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active {
+  *zoom: 1;
+  -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+  display: block;
+  padding: 10px;
+  color: #555555;
+  text-decoration: none;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:before, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:after, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited:before, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited:after, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active:before, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active:after {
+  content: " ";
+  display: table;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:after, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited:after, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active:after {
+  clear: both;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a img, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited img, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active img {
+  float: left;
+  margin-right: 5px;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a strong, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:visited strong, .pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:active strong {
+  display: block;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul a:hover {
+  background-color: #dddddd;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages > .pop-sidebar > ul > li.active a {
+  background-color: whitesmoke;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body {
+  width: 66.66666%;
+  background-color: whitesmoke;
+  padding: 0;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation {
+  margin: 10px;
+  padding: 10px;
+  display: table;
+  border-collapse: collapse;
+  list-style-type: none;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li {
+  border-top: 1px solid #dddddd;
+  display: table-row;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li:first-child {
+  border-top: 0 none;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > * {
+  display: table-cell;
+  vertical-align: top;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > .avatar {
+  padding: 10px 10px 0 0;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > .text {
+  padding: 10px 10px 10px 0;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > .text > .name {
+  font-weight: bold;
+}
+.pop > .pop-dialog > .pop-output > .pop-messages .pop-body ul.pop-conversation > li > .text > .date {
+  color: #999999;
+  font-size: 90%;
+}
+
+.pop > .pop-dialog > .pop-output > .pop-calendar {
+  *zoom: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-y: auto;
+  height: 100%;
+  white-space: visible;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar:before, .pop > .pop-dialog > .pop-output > .pop-calendar:after {
+  content: " ";
+  display: table;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar:after {
+  clear: both;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > * {
+  float: left;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table {
+  width: 100%;
+  background: url("/css/images/calendarbg1.png") repeat-y scroll left top transparent;
+  margin-top: 20px;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > thead {
+  width: 100%;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > thead > tr {
+  background: url("/css/images/calendartop.png") no-repeat scroll left top transparent;
+  padding-left: 50px;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > thead > tr > th:first-child {
+  padding-left: 65px;
+  font-size: 20px;
+  color: #737373;
+  text-align: left;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > thead > tr th {
+  padding-bottom: 23px;
+  padding-top: 7px;
+  border-bottom: 2px solid #c9c9ca;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > thead > tr th > div.pop-main-today {
+  font-size: 14px;
+  display: inline;
+  font-weight: normal;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody {
+  width: 100%;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr {
+  background: url("/css/images/calendarbg.png") no-repeat scroll left top transparent;
+  padding-left: 50px;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr > td:first-child {
+  padding-left: 65px;
+  padding-right: 20px;
+  white-space: nowrap;
+  width: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #737373;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td {
+  padding-bottom: 30px;
+  padding-top: 12px;
+  border-bottom: 1px solid #ededed;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td > div.pop-main-eventname {
+  color: #c0493f;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td div.pop-main-cat {
+  padding-left: 10px;
+  font-size: 11px;
+  color: #737373;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-hour {
+  text-align: right;
+  width: 108px;
+  font-size: 11px;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box {
+  border-left: 1px solid #d6d6d6;
+  border-right: 1px solid #d6d6d6;
+  padding-right: 20px;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box > div.pop-main-str {
+  margin-bottom: 5px;
+  color: #9d9d9d;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box p {
+  font-weight: bold;
+  color: #737373;
+  display: inline;
+  margin-left: 5px;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box > div.pop-main-stp {
+  margin-bottom: 0px;
+  color: #9d9d9d;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box p {
+  font-weight: bold;
+  color: #737373;
+  display: inline;
+  margin-left: 5px;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-more {
+  text-align: right;
+  width: 125px;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-more > a {
+  color: #989898;
+  border: 2px solid #d0d0d0;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+}
+.pop > .pop-dialog > .pop-output > .pop-calendar > table > tbody > tr td.pop-main-more > a:hover {
+  color: #8d8d8d;
+  border: 2px solid #989898;
+}

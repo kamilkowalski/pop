@@ -17,6 +17,13 @@ $text-light: #FFFFFF;
 $text-dark: #555555;
 $text-faded: #999999;
 
+// Background images
+
+$background-calendar: url("/css/images/calendarbg.png") no-repeat scroll left top transparent;
+$background-calendar1: url("/css/images/calendarbg1.png") repeat-y scroll left top transparent;
+$background-calendar2: url("/css/images/calendartop.png") no-repeat scroll left top transparent;
+
+
 // Sizes
 $header-height: 54px;
 $header-font-size: 18px;
@@ -342,3 +349,157 @@ $pop-width: 900px;
     }
   }
 }
+
+// Calendar screen
+
+.pop {
+  > .pop-dialog {
+    > .pop-output{
+      > .pop-calendar {
+        @include clearfix;
+        padding-left:20px;
+        padding-right:20px;
+        overflow-y:auto;
+        height:100%;
+        white-space:visible;
+
+          > * {
+            float: left;
+          }
+
+            > table {
+                width:100%;
+                background: $background-calendar1;
+                margin-top:20px;
+
+
+                 > thead {
+                width:100%;     
+
+                  > tr {
+                  background: $background-calendar2;
+                  padding-left:50px;
+
+
+                      > th:first-child {
+                      padding-left:65px;
+                      font-size:20px;
+                      color:#737373;
+                      text-align:left;
+                      }
+                      th {
+                      padding-bottom:23px;
+                      padding-top:7px;
+                      border-bottom:2px solid #c9c9ca;
+
+
+                             > div.pop-main-today {
+                                  font-size:14px;
+                                  display:inline;
+                                  font-weight:normal;
+                              }
+                      }
+                  }
+                }
+                
+                > tbody {
+                width:100%;     
+
+                  > tr {
+                  background: $background-calendar;
+                  padding-left:50px;
+
+
+                      > td:first-child {
+                      padding-left:65px;
+                      padding-right:20px;
+                      white-space:nowrap;
+                      width:100px;
+                      font-size:20px;
+                      font-weight:bold;
+                      color:#737373;
+                      }
+                      td {
+                      padding-bottom: 30px;
+                      padding-top: 12px;
+                      border-bottom:1px solid #ededed;
+                                     
+                                      >  div.pop-main-eventname {
+                                         color:#c0493f; 
+                                         padding-left:10px; 
+                                         font-weight:bold;
+                                                 }         
+                                         div.pop-main-cat {
+                                         padding-left:10px; 
+                                         font-size:11px;
+                                         color:#737373;
+                                         }
+                      }
+
+                     td.pop-main-hour {
+                      text-align:right;
+                      width:108px;
+                      font-size:11px;
+
+                      
+
+                                      >  div.pop-main-hour-box {
+                                         border-left:1px solid #d6d6d6;
+                                         border-right:1px solid #d6d6d6; 
+                                         padding-right:20px;  
+
+                                           >  div.pop-main-str {
+                                              margin-bottom:5px;
+                                              color:#9d9d9d;
+                                           }
+
+                                           p {
+                                              font-weight:bold;
+                                              color:#737373;
+                                              display:inline;
+                                              margin-left:5px;
+                                           }
+
+                                          >  div.pop-main-stp {
+                                              margin-bottom:0px;
+                                              color:#9d9d9d;
+                                           }
+
+                                           p {
+                                              font-weight:bold;
+                                              color:#737373;
+                                              display:inline;
+                                              margin-left:5px;
+                                           }
+
+                                      }                  
+                    }
+
+                     td.pop-main-more {
+                      text-align:right;
+                      width:125px;
+                                  > a {
+                                  color:#989898;
+                                  border:2px solid #d0d0d0;
+                                  border-radius:3px;
+                                  padding:5px 10px;
+                                  font-weight:bold;
+                                  font-size:12px;
+                                  text-decoration:none;
+                                  }
+
+                                  > a:hover {
+                                  color:#8d8d8d;
+                                  border:2px solid #989898;
+                                  }
+                      }
+
+
+                }
+              }
+            }
+          }
+        }
+      }
+    } 
+  

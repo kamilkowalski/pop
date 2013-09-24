@@ -20,11 +20,72 @@
             <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
     </head>
-    <body>
-        <h1>Pop - the new modal/popup plugin for WebOrg</h1>
+
+         <body>
+        <h1>Pop - CALEaNDARdhhdfgdfgdihhjhjkh</h1>
         <p>This is the new WebOrg modal/popup plugin that will be used on the front page of every WebOrg instance.</p>
         <p>The usage is pretty simple and requires minimal configuration. There are several ways of opening a new modal and adding content to it.</p>
+       
+
+
+
+      <h2>Pre-rendered modal, triggered via JavaScript and filled with AJAX-loaded content</h2>
         
+        <h3>HTML:</h3>
+        <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+        <button id="showPop3">Load it</button>
+
+        <div class="pop" id="myPop3">
+            <div class="pop-dialog">
+                <div class="pop-head">
+                    <div class="pop-title">Title</div>
+                    <a href="#" class="pop-close" data-close="true">&times;</a>
+                    <ul class="pop-menu">
+                        <li><a href="#">Min kalender</a></li>
+                        <li><a href="#">Mine medlemskap</a></li>
+                        <li><a href="#">Innstillinger</a></li>
+                        <li><a href="#">Payment</a></li>
+                    </ul>
+                </div>
+                <div class="pop-output">
+                    
+                </div>
+            </div>
+        </div>
+        </script>
+
+        <h3>JavaScript:</h3>
+        <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+        // JavaScript
+        $("#showPop3").on("click", function(){
+            $("#myPop3").pop("show", {load: "ajax_calendar.html"});
+        });
+        ]]></script>
+
+        <h3>Demo:</h3>
+        <button id="showPop3">Load it</button>
+
+        <div class="pop pop-flex" id="myPop3">
+            <div class="pop-dialog">
+                <div class="pop-head">
+                    <div class="pop-title">Title</div>
+                    <a href="#" class="pop-close" data-close="true">&times;</a>
+                    <ul class="pop-menu">
+                        <li><a href="#">Min kalender</a></li>
+                        <li><a href="#">Mine medlemskap</a></li>
+                        <li><a href="#">Innstillinger</a></li>
+                        <li><a href="#">Payment</a></li>
+                    </ul>
+                </div>
+                <div class="pop-output">
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
         <h2>Pre-rendered modal, triggered via JavaScript</h2>
 
         <h3>HTML:</h3>
@@ -91,6 +152,9 @@
             </div>
         </div>
 
+
+
+
         <h2>Pre-rendered modal, triggered via JavaScript and filled with AJAX-loaded content</h2>
         
         <h3>HTML:</h3>
@@ -125,7 +189,7 @@
         <h3>Demo:</h3>
         <button id="showPop2">Load it</button>
 
-        <div class="pop" id="myPop2">
+        <div class="pop pop-flex" id="myPop2">
             <div class="pop-dialog">
                 <div class="pop-head">
                     <div class="pop-title">Title</div>
