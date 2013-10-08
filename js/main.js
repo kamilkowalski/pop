@@ -9,3 +9,7 @@ $("#showPop3").on("click", function(){
 $("#showPop2").on("click", function(){
   $("#myPop2").pop("show", {load: "ajax_contents.html"});
 });
+
+$("#showPop4").on("click", function(){
+  $("#myPop4").pop("show", {load: "ajax_configuration.html"});
+});
