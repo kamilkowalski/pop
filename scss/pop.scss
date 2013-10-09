@@ -19,10 +19,10 @@ $text-faded: #999999;
 
 // Background images
 
-$background-calendar: url("/css/images/calendarbg.png") no-repeat scroll left top transparent;
-$background-calendar1: url("/css/images/calendarbg1.png") repeat-y scroll left top transparent;
-$background-calendar2: url("/css/images/calendartop.png") no-repeat scroll left top transparent;
-$background-sett-yes: url("/css/images/yes.png") no-repeat scroll right top #e8fbe9;
+$background-calendar: url("/pop/css/images/calendarbg.png") no-repeat scroll left top transparent;
+$background-calendar1: url("/pop/css/images/calendarbg1.png") repeat-y scroll left top transparent;
+$background-calendar2: url("/pop/css/images/calendartop.png") no-repeat scroll left top transparent;
+$background-sett-yes: url("/pop/css/images/yes.png") no-repeat scroll right top #e8fbe9;
 
 
 // Sizes
@@ -842,7 +842,7 @@ $pop-width: 900px;
             width:100%;
             margin-top:0px;
             height:100%;
-             background:url("/css/images/bg.png") repeat-y scroll left top transparent;
+             background:url("/pop/css/images/bg.png") repeat-y scroll left top transparent;
 
             > tbody {
               width:100%;     
@@ -991,7 +991,7 @@ $pop-width: 900px;
         left:auto;
         margin-left:240px;
         bottom:20px;
-        background:url("/css/images/barshade.png") repeat-x scroll left top transparent;
+        background:url("/pop/css/images/barshade.png") repeat-x scroll left top transparent;
 
         > button {
           background:#3fa74f;

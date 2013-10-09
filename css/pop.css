@@ -496,7 +496,7 @@
 }
 .pop > .pop-dialog > .pop-output .pop-calendar.active > table {
   width: 100%;
-  background: url("/css/images/calendarbg1.png") repeat-y scroll left top transparent;
+  background: url("/pop/css/images/calendarbg1.png") repeat-y scroll left top transparent;
   margin-top: 20px;
 }
 .pop > .pop-dialog > .pop-output .pop-calendar.active > table > thead {
@@ -510,7 +510,7 @@
   font-size: 20px;
   color: #737373;
   text-align: left;
-  background: url("/css/images/calendartop.png") no-repeat scroll left top transparent;
+  background: url("/pop/css/images/calendartop.png") no-repeat scroll left top transparent;
 }
 .pop > .pop-dialog > .pop-output .pop-calendar.active > table > thead > tr th {
   padding-bottom: 23px;
@@ -538,7 +538,7 @@
   color: #737373;
   padding-bottom: 28px;
   padding-top: 12px;
-  background: url("/css/images/calendarbg.png") no-repeat scroll left top transparent;
+  background: url("/pop/css/images/calendarbg.png") no-repeat scroll left top transparent;
 }
 .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td {
   padding-bottom: 20px;
@@ -665,7 +665,7 @@
   padding-top: 0px;
 }
 .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more td:first-child {
-  background: url("/css/images/calendarbg1.png") repeat-y scroll left top transparent;
+  background: url("/pop/css/images/calendarbg1.png") repeat-y scroll left top transparent;
 }
 .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.openedbox > td {
   padding-bottom: 0px;
@@ -695,7 +695,7 @@
   width: 100%;
   margin-top: 0px;
   height: 100%;
-  background: url("/css/images/bg.png") repeat-y scroll left top transparent;
+  background: url("/pop/css/images/bg.png") repeat-y scroll left top transparent;
 }
 .pop > .pop-dialog > .pop-output .pop-configuration.active > table > tbody {
   width: 100%;
@@ -762,7 +762,7 @@
 .pop > .pop-dialog > .pop-output .pop-configuration.active > table > tbody > tr td > dd div.dTreeNode.chosen {
   border-bottom: 1px solid #d9d9d9;
   padding-left: 10px;
-  background: url("/css/images/yes.png") no-repeat scroll right top #e8fbe9;
+  background: url("/pop/css/images/yes.png") no-repeat scroll right top #e8fbe9;
 }
 .pop > .pop-dialog > .pop-output .pop-configuration.active > table > tbody > tr td > dd > div.dTreeNode {
   padding-left: 10px;
@@ -787,7 +787,7 @@
   left: auto;
   margin-left: 240px;
   bottom: 20px;
-  background: url("/css/images/barshade.png") repeat-x scroll left top transparent;
+  background: url("/pop/css/images/barshade.png") repeat-x scroll left top transparent;
 }
 .pop > .pop-dialog > .pop-output div.pop-main-absbut > button {
   background: #3fa74f;
