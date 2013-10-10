@@ -5,18 +5,31 @@
     this.$element = $(element);
     this.$backdrop = null;
     this.options = options;
+
+    console.log(options);
+    console.log(this.options);
   }
 
   Pop.DEFAULTS = {
-    animate: true
+    show: true
   }
 
-  Pop.prototype.show = function(args){
-    if(args.load){
-      this.loadUrl(args.load, this.showPop);
+  Pop.prototype.show = function(){
+    if(this.options.load){
+      // First fetch the content, then run the callback
+      this.loadUrl(this.options.load, this.showPop);
     } else {
+      // Set the HTML if there's an option for it
+      if(this.options.html){
+        this.html(this.options.html);
+      }
+
       this.showPop();
     }
+  }
+
+  Pop.prototype.html = function(html){
+    this.$element.find(".pop-output").html(html);
   }
 
   Pop.prototype.showPop = function(){
@@ -64,7 +77,7 @@
 
   Pop.prototype.loadUrl = function(url, callback){
     $.get(url, $.proxy(function(data, status, xhr){
-      this.$element.find(".pop-output").html(data);
+      this.html(data);
       $.proxy(callback, this)();
     }, this));
   }
@@ -94,16 +107,15 @@
     this.$element.off("click");    
   }
 
-  $.fn.pop = function(option, argv){
+  $.fn.pop = function(option){
     return this.each(function(){
       var $this = $(this);
       var data = $this.data('wo.pop');
       var options = $.extend({}, Pop.DEFAULTS, $this.data(), typeof option == 'object' && option);
-      var arguments = $.extend({}, typeof argv == 'object' && argv);
 
       if (!data) $this.data('wo.pop', (data = new Pop(this, options)));
-      if (typeof option == 'string') data[option](arguments);
-      else if (options.show) data.show(arguments);
+      if (typeof option == 'string') data[option]();
+      else if (options.show) data.show();
     });
   }
 
@@ -111,13 +123,8 @@
     $(".pop-flex").each(function(){
       var $this = $(this);
       var data = $this.data('wo.pop');
-      var options = $.extend({}, Pop.DEFAULTS, $this.data(), typeof option == 'object' && option);
-
-      if (!data) $this.data('wo.pop', (data = new Pop(this, options)));
-      data.flex();
+      if (data) data.flex();
     });
   });
-
-  $(window).trigger("resize");
 
 })(window.jQuery);

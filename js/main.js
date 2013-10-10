@@ -1,13 +1,13 @@
 $("#showPop1").on("click", function(){
-  $("#myPop1").pop("show");
+  $("#myPop1").pop({html: "<div class=\"pop-main\"><div class=\"pop-body\">This is the real body!</div></div>"});
 });
 
 $("#showPop2").on("click", function(){
-  $("#myPop2").pop("show", {load: "ajax_contents.html"});
+  $("#myPop2").pop({load: "ajax_contents.html"});
 });
 
 $("#showPop3").on("click", function(){
-  $("#myPop3").pop("show", {load: "ajax_calendar.html"});
+  $("#myPop3").pop({load: "ajax_calendar.html"});
 });
 
 $(document.body).on("click", ".pop a.btn-pop-more", function(e){
