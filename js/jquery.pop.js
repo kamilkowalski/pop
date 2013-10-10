@@ -41,9 +41,7 @@
       that.$backdrop = $("<div>", {"class": "pop-backdrop"}).hide().appendTo(document.body);
     }
 
-    if(!that.$element.parent().length){
-      that.$element.appendTo(document.body);
-    }
+    that.$element.appendTo(document.body);
 
     that.$backdrop.show();
     that.$element.show();
