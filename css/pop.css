@@ -215,9 +215,9 @@
   .pop.pop-flex > .pop-dialog {
     height: 90%; }
 
-.pop-open {
-  overflow: hidden;
-  margin-right: 15px; }
+body.pop-open {
+  overflow: hidden !important;
+  margin-right: 15px !important; }
 
 .pop-backdrop {
   -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;

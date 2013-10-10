@@ -303,9 +303,9 @@ $pop-width: 900px;
   }
 }
 
-.pop-open {
-  overflow: hidden;
-  margin-right: 15px;
+body.pop-open {
+  overflow: hidden !important;
+  margin-right: 15px !important;
 }
 
 .pop-backdrop {
