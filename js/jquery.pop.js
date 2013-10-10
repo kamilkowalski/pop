@@ -4,10 +4,7 @@
   var Pop = function(element, options){
     this.$element = $(element);
     this.$backdrop = null;
-    this.options = options;
-
-    console.log(options);
-    console.log(this.options);
+    this._options = options;
   }
 
   Pop.DEFAULTS = {
@@ -15,13 +12,13 @@
   }
 
   Pop.prototype.show = function(){
-    if(this.options.load){
+    if(this._options.load){
       // First fetch the content, then run the callback
-      this.loadUrl(this.options.load, this.showPop);
+      this.loadUrl(this._options.load, this.showPop);
     } else {
       // Set the HTML if there's an option for it
-      if(this.options.html){
-        this.html(this.options.html);
+      if(this._options.html){
+        this.html(this._options.html);
       }
 
       this.showPop();
@@ -30,6 +27,11 @@
 
   Pop.prototype.html = function(html){
     this.$element.find(".pop-output").html(html);
+  }
+
+  Pop.prototype.options = function(options){
+    this._options = options;
+    return this;
   }
 
   Pop.prototype.showPop = function(){
@@ -113,7 +115,7 @@
 
       if (!data) $this.data('wo.pop', (data = new Pop(this, options)));
       if (typeof option == 'string') data[option]();
-      else if (options.show) data.show();
+      else if (options.show) data.options(options).show();
     });
   }
 
@@ -123,6 +125,11 @@
       var data = $this.data('wo.pop');
       if (data) data.flex();
     });
+  });
+
+  $(document).on("click", ".pop a[data-remote]", function(e){
+    e.preventDefault();
+    $.ajax($(this).attr("href"));
   });
 
 })(window.jQuery);
