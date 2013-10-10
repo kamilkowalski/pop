@@ -11,7 +11,7 @@
   position: fixed;
   z-index: 1080;
   overflow: auto;
-  overflow-y: auto;
+  overflow-y: scroll;
   display: none;
   opacity: 0; }
   .pop.in {
@@ -216,7 +216,8 @@
     height: 90%; }
 
 .pop-open {
-  overflow: hidden; }
+  overflow: hidden;
+  margin-right: 15px; }
 
 .pop-backdrop {
   -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
