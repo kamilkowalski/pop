@@ -12,6 +12,12 @@
   }
 
   Pop.prototype.show = function(){
+
+    // Set the Pop title if present
+    if(this._options.title){
+      this.title(this._options.title);
+    }
+
     if(this._options.load){
       // First fetch the content, then run the callback
       this.loadUrl(this._options.load, this.showPop);
@@ -32,6 +38,10 @@
   Pop.prototype.options = function(options){
     this._options = options;
     return this;
+  }
+
+  Pop.prototype.title = function(title){
+    this.$element.find(".pop-title").html(title);
   }
 
   Pop.prototype.showPop = function(){
