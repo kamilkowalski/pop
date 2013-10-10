@@ -1,9 +1,11 @@
-<ul class="pop-submenu">
-    <li class="submenu1a active"><a href="#">Private meldinger</a></li>
-     <li class="submenu2a"><a href="#">Vegg</a></li>
+<ul class="pop-submenu" data-tabs="true">
+    <li class="active"><a href="#messages">Private meldinger</a></li>
+    <li><a href="#wall">Vegg</a></li>
+    <li><a href="#wall">Foo</a></li>
+    <li><a href="#wall">Bar</a></li>
 </ul>
 
-<div class="pop-main pop-messages pop-1 active">
+<div id="messages" class="pop-main pop-messages pop-tab active">
     <div class="pop-sidebar pop-scrollable">
         <ul class="contacts">
             <li><a href="#">
@@ -74,170 +76,144 @@
     </div>
 </div>
 
-<div class="pop-main pop-messages pop-2">
+<div id="wall" class="pop-main pop-messages pop-tab">
 
-    <div class="pop-sidebar pop-scrollable" id="group-container">
+    <div class="pop-sidebar pop-scrollable">
         <ul class="contacts">
             <li><a href="#">
-                    <img src="/css/images/select.png" alt="John Malkovic">
+                    <img src="css/images/select.png" alt="John Malkovic">
                     <div><strong>Baseball 1999</strong> Baseball training group</div>
                 </a>
             </li>
            <li class="active"><a href="#">
-                    <img src="/css/images/select.png" alt="John Malkovic">
+                    <img src="css/images/select.png" alt="John Malkovic">
                     <div><strong>Football club</strong> Fotball professional group 2013</div>
                 </a>
             </li>
             <li><a href="#">
-                    <img src="/css/images/select.png" alt="John Malkovic">
+                    <img src="css/images/select.png" alt="John Malkovic">
                     <div><strong>Basketball kids</strong> Basketball for kids under age of 10</div>
                 </a>
             </li>
             <li><a href="#">
-                    <img src="/css/images/select.png" alt="John Malkovic">
+                    <img src="css/images/select.png" alt="John Malkovic">
                     <div><strong>Running with nike</strong> Group for the ones sponsored by nike</div>
                 </a>
             </li>
         </ul>
     </div>
 
-    <div id="wall" class="pop-body pop-scrollable">
-        <form class="wall-form" action="/" method="post">
+    <div class="pop-body pop-scrollable">
+        <div class="wall-message-container">
 
-            <div id="wall-message-container">
-
-                <div id="wall-message-content">
-                    <textarea id="message" cols="70" rows="4" title="Hva vil du skrive?" name="message"></textarea>
-                    <input id="gid" type="hidden" value="8" name="gid">
-                    <input id="uid" type="hidden" value="1" name="uid">
-                </div>
-
-                <div id="bottom-panel" data-url="">
-                        <div class="grpyouarein">Posting in <b> Fotball club </b> group</div>
-                        
-                        <input id="PostMessage" type="submit" value="SEND MESSAGE" name="sub">
-                        <input id="Addfiletowall" type="submit" value="ADD FILE" name="sub">
-
-
-                </div>
-
+            <div id="wall-message-content">
+                <textarea id="message" cols="70" rows="4" title="Hva vil du skrive?" name="message"></textarea>
             </div>
 
-            <div class="post-container">
+            <div id="bottom-panel" data-url="">
+                <div class="your-group">Posting in <b> Fotball club </b> group</div>
+                
+                <input id="wall-post-message" type="submit" value="SEND MESSAGE" name="sub">
+                <input id="wall-add-file" type="submit" value="ADD FILE" name="sub">
+            </div>
 
-                <form class="wall-form" action="/" method="post">
-                    <input id="gid" type="hidden" value="8" name="gid">
-                    <input id="uid" type="hidden" value="1" name="uid">
-                    <input id="mid" type="hidden" value="3" name="mid">
+        </div>
+
+        <div class="post-container">
             <div class="message-conatiner">
                 <div class="avatar-container">
-                    <img class="avatar" src="/css/images/post.png" alt="avatar">
+                    <img class="avatar" src="css/images/post.png" alt="avatar">
                 </div>
                 <div class="message-content">
                     <span class="u-name">SuperAdmin test account</span>
                     <span class="u-date">30-09-2013 14:41:57</span>
-                    <p class="u-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
+                    <p class="u-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
                 <div class="message-bottom-panel">
                     <div>
-                        Show 
-                        <span class="comment-num">
-                                        <strong>21</strong>
-                        </span>
-                        earlier comments
-                        
+                        Show <span class="comment-num"><strong>21</strong></span> earlier comments
                     </div>
                 </div>
             </div>
-            <div id="3" class="post-comments" style="display: block;">
-
-                 <div class="comment-container">
-                        <span class="c-avatar">
-                             <img class="avatar" src="/css/images/comment.png" alt="avatar">
-                        </span>
-                         <div class="comment-content">
-                            <div>
-                                <span class="comment-author">SuperAdmin test account</span>
-                                <span class="comment-date">2013-09-30 15:08:35</span>
-                            </div>
-                            <span class="comment-body">ffhfhfhfhfh</span>
+            <div class="post-comments">
+                <div class="comment-container">
+                    <span class="c-avatar">
+                         <img class="avatar" src="css/images/comment.png" alt="avatar">
+                    </span>
+                    <div class="comment-content">
+                        <div>
+                            <span class="comment-author">SuperAdmin test account</span>
+                            <span class="comment-date">2013-09-30 15:08:35</span>
                         </div>
+                        <span class="comment-body">This is a test comment</span>
+                    </div>
                 </div>
 
                 <div class="comment-container">
-                        <span class="c-avatar">
-                             <img class="avatar" src="/css/images/comment.png" alt="avatar">
-                        </span>
-                         <div class="comment-content">
-                            <div>
-                                <span class="comment-author">SuperAdmin test account</span>
-                                <span class="comment-date">2013-09-30 15:08:35</span>
-                            </div>
-                            <span class="comment-body">ffhfhfhfhfh</span>
+                    <span class="c-avatar">
+                         <img class="avatar" src="css/images/comment.png" alt="avatar">
+                    </span>
+                    <div class="comment-content">
+                        <div>
+                            <span class="comment-author">SuperAdmin test account</span>
+                            <span class="comment-date">2013-09-30 15:08:35</span>
                         </div>
+                        <span class="comment-body">This is a test comment</span>
+                    </div>
                 </div>
 
                 <div class="comment-container">
-                        <span class="c-avatar">
-                             <img class="avatar" src="/css/images/comment.png" alt="avatar">
-                        </span>
-                         <div class="comment-content">
-                            <div>
-                                <span class="comment-author">SuperAdmin test account</span>
-                                <span class="comment-date">2013-09-30 15:08:35</span>
-                            </div>
-                            <span class="comment-body">ffhfhfhfhfh</span>
+                    <span class="c-avatar">
+                         <img class="avatar" src="css/images/comment.png" alt="avatar">
+                    </span>
+                    <div class="comment-content">
+                        <div>
+                            <span class="comment-author">SuperAdmin test account</span>
+                            <span class="comment-date">2013-09-30 15:08:35</span>
                         </div>
-                </div>
-                <div id="3" class="add-comment" data-mid="3">
-
-                <span class="myavatar-container">
-                    <img class="avatar" src="/css/images/comment.png" alt="avatar">
-                </span>
-                    <textarea id="comment" cols="70" rows="2" name="comment"></textarea>
-                    <input id="PostMessage" class="btn" type="submit" value="Send inn" name="com">
-                </div>
-            </div>
-
-            <div class="message-conatiner">
-                <div class="avatar-container">
-                    <img class="avatar" src="/css/images/post.png" alt="avatar">
-                </div>
-                <div class="message-content">
-                    <span class="u-name">SuperAdmin test account</span>
-                    <span class="u-date">30-09-2013 14:41:57</span>
-                    <p class="u-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
-                </div>
-                <div class="message-bottom-panel">
-                    <div>
-                        <span class="comment-num">
-                                        <strong>0</strong>
-                        </span>
-                        <a class="comment-btn" href="#">Kommentar</a>
-                        >
+                        <span class="comment-body">This is a test comment</span>
                     </div>
                 </div>
+                <div class="add-comment">
+                    <span class="myavatar-container">
+                        <img class="avatar" src="css/images/comment.png" alt="avatar">
+                    </span>
+                    <textarea cols="70" rows="2" name="comment" placeholder="Type your comment and hit enter"></textarea>
             </div>
+        </div>
 
-            <div class="message-conatiner">
-                <div class="avatar-container">
-                    <img class="avatar" src="/css/images/post.png" alt="avatar">
-                </div>
-                <div class="message-content">
-                    <span class="u-name">SuperAdmin test account</span>
-                    <span class="u-date">30-09-2013 14:41:57</span>
-                    <p class="u-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-                </div>
-                <div class="message-bottom-panel">
-                    <div>
-                        <span class="comment-num">
-                                        <strong>0</strong>
-                        </span>
-                        <a class="comment-btn" href="#">Kommentar</a>
-                        >
-                    </div>
+        <div class="message-conatiner">
+            <div class="avatar-container">
+                <img class="avatar" src="css/images/post.png" alt="avatar">
+            </div>
+            <div class="message-content">
+                <span class="u-name">SuperAdmin test account</span>
+                <span class="u-date">30-09-2013 14:41:57</span>
+                <p class="u-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="message-bottom-panel">
+                <div>
+                    <span class="comment-num"><strong>0</strong></span>
+                    <a class="comment-btn" href="#">Kommentar</a>
                 </div>
             </div>
-        </form>
+        </div>
+
+        <div class="message-conatiner">
+            <div class="avatar-container">
+                <img class="avatar" src="css/images/post.png" alt="avatar">
+            </div>
+            <div class="message-content">
+                <span class="u-name">SuperAdmin test account</span>
+                <span class="u-date">30-09-2013 14:41:57</span>
+                <p class="u-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="message-bottom-panel">
+                <div>
+                    <span class="comment-num"><strong>0</strong></span>
+                    <a class="comment-btn" href="#">Kommentar</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div> 

@@ -1,21 +1,18 @@
-<ul class="pop-submenu">
-    <li class="submenu1 active"><a href="#">Upcoming events</a></li>
-    <li class="submenu2"><a href="#">My events</a></li>
-    <li class="submenu3"><a href="#">Configuration</a></li>
+<ul class="pop-submenu" data-tabs="true">
+    <li class="active"><a href="#events">Upcoming events</a></li>
+    <li><a href="#myevents">My events</a></li>
+    <li><a href="#configuration">Configuration</a></li>
 </ul>
-<div class="pop-main pop-calendar active">
 
+<div id="events" class="pop-main pop-calendar pop-tab active">
    <table class="table">
-        
         <thead>
             <tr>
                 <th colspan="4"> Today <div class="pop-main-today">(21 July 2013)</div> </th>
             </tr>
         </thead>  
 
-
         <tbody>
-
             <tr>
                 <td>10 JANUAR</td>
                 <td class="pop-main-hour"><div class="pop-main-hour-box"><div class="pop-main-str">START <p>08:05</p></div><div class="pop-main-stp">END <p>13:05</p></div></div></td>
@@ -293,263 +290,251 @@
 </div>
 
 
-<div class="pop-main pop-myevents">
+<div id="myevents" class="pop-main pop-tab">
 </div>
 
-<div class="pop-main pop-configuration">
+<div id="configuration" class="pop-main pop-configuration pop-tab">
+    <div class="pop-sidebar pop-scrollable">
+        <ul data-tabs="true">
+            <li class="active">
+                <a href="#config-categories">Club categories</a>
+            </li>
+            <li>
+                <a href="#config-types">Event type</a>
+            </li>
+        </ul>
+    </div>
+                     
+    <div class="pop-body pop-scrollable">
+        <div id="config-categories" class="pop-tab active">
+            <dt id="categories-label">
+                <b>Select categories that You are interested in</b> <p style="display:inline;font-size:12px;">(click on a name)</p>
+            </dt>
 
-    <table class="table">
+            <dd id="categories-element">
 
-        <tbody>
+                <div class="dTreeNode">
 
-            <tr>
+                    <img id="webOrgTreeImg-e7353-6" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-6',0)" alt="">
+                    <input id="categories-e7353-6" type="checkbox" name="categories[]" value="6">
+                    <span onclick="javascript: openCloseFormTree('e7353-6',0)" style="cursor: pointer;">Holmen Hockey</span>
 
-                <td>
-                     <ul>
+                </div>
 
-                        <li class="choosetab1 active"><a>Club categories</a></li>
-                        <li class="choosetab2"><a>Event type</a></li>
+                <div id="webOrgTreeDiv-e7353-6" class="clip" data-nodeid="6">
 
-                    </ul>
+                    <div class="dTreeNode">
 
-                </td>
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-8" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-8',0)" alt="">
+                        <input id="categories-e7353-8" type="checkbox" name="categories[]" value="8">
+                        <span onclick="javascript: openCloseFormTree('e7353-8',0)" style="cursor: pointer;">   Holmen Hockey - G10 1</span>
 
-                <td class="pop-main-tree1 current">
+                    </div>
 
-                    <dt id="categories-label">
-                        <b>Select categories that You are interested in</b> <p style="display:inline;font-size:12px;">(click on a name)</p>
-                    </dt>
-
-                    <dd id="categories-element">
-
+                    <div id="webOrgTreeDiv-e7353-8" class="clip" style="" data-nodeid="8">
                         <div class="dTreeNode">
 
-                            <img id="webOrgTreeImg-e7353-6" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-6',0)" alt="">
-                            <input id="categories-e7353-6" type="checkbox" name="categories[]" value="6">
-                            <span onclick="javascript: openCloseFormTree('e7353-6',0)" style="cursor: pointer;">Holmen Hockey</span>
+                            <img src="/css/images/line.gif" alt="">
+                            <img src="/css/images/line.gif" alt="">
+                            <img id="webOrgTreeImg-e7353-9" src="/css/images/joinbottom.gif" alt="">
+                            <input id="categories-e7353-9" type="checkbox" name="categories[]" value="9"  >
+                            <span style="cursor: pointer;">     Holmen Hockey - G08 1</span>
 
                         </div>
+                    </div>
 
-                        <div id="webOrgTreeDiv-e7353-6" class="clip" data-nodeid="6">
+                    <div class="dTreeNode">
 
-                            <div class="dTreeNode">
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-10" src="/css/images/join.gif" alt="">
+                        <input id="categories-e7353-10" type="checkbox" name="categories[]" value="10">
+                        <span style="cursor: pointer;">   Holmen Hockey - G10 2</span>
 
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-8" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-8',0)" alt="">
-                                <input id="categories-e7353-8" type="checkbox" name="categories[]" value="8">
-                                <span onclick="javascript: openCloseFormTree('e7353-8',0)" style="cursor: pointer;">   Holmen Hockey - G10 1</span>
+                    </div>
 
-                            </div>
+                    <div class="dTreeNode">
 
-                            <div id="webOrgTreeDiv-e7353-8" class="clip" style="" data-nodeid="8">
-                                <div class="dTreeNode">
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-7" src="/css/images/joinbottom.gif" alt="">
+                        <input id="categories-e7353-7" type="checkbox" name="categories[]" value="7"  >
+                        <span style="cursor: pointer;">   Holmen Hockey - G11 1</span>
 
-                                    <img src="/css/images/line.gif" alt="">
-                                    <img src="/css/images/line.gif" alt="">
-                                    <img id="webOrgTreeImg-e7353-9" src="/css/images/joinbottom.gif" alt="">
-                                    <input id="categories-e7353-9" type="checkbox" name="categories[]" value="9"  >
-                                    <span style="cursor: pointer;">     Holmen Hockey - G08 1</span>
+                    </div>
 
-                                </div>
-                            </div>
-
-                            <div class="dTreeNode">
-
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-10" src="/css/images/join.gif" alt="">
-                                <input id="categories-e7353-10" type="checkbox" name="categories[]" value="10">
-                                <span style="cursor: pointer;">   Holmen Hockey - G10 2</span>
-
-                            </div>
-
-                            <div class="dTreeNode">
-
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-7" src="/css/images/joinbottom.gif" alt="">
-                                <input id="categories-e7353-7" type="checkbox" name="categories[]" value="7"  >
-                                <span style="cursor: pointer;">   Holmen Hockey - G11 1</span>
-
-                            </div>
-
-                        </div>
+                </div>
 
 
+                <div class="dTreeNode">
+                    
+                    <img id="webOrgTreeImg-e7353-6" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-6',0)" alt="">
+                    <input id="categories-e7353-6" type="checkbox" name="categories[]" value="6" >
+                    <span onclick="javascript: openCloseFormTree('e7353-6',0)" style="cursor: pointer;">Holmen Fotball</span>
+
+                </div>
+
+                <div id="webOrgTreeDiv-e7353-6" class="clip" data-nodeid="6">
+
+                    <div class="dTreeNode">
+
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-8" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-8',0)" alt="">
+                        <input id="categories-e7353-8" type="checkbox" name="categories[]" value="8">
+                        <span onclick="javascript: openCloseFormTree('e7353-8',0)" style="cursor: pointer;">   Holmen Fotball - G10 1</span>
+
+                    </div>
+
+                    <div id="webOrgTreeDiv-e7353-8" class="clip" style="" data-nodeid="8">
                         <div class="dTreeNode">
-                            
-                            <img id="webOrgTreeImg-e7353-6" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-6',0)" alt="">
-                            <input id="categories-e7353-6" type="checkbox" name="categories[]" value="6" >
-                            <span onclick="javascript: openCloseFormTree('e7353-6',0)" style="cursor: pointer;">Holmen Fotball</span>
+
+                            <img src="/css/images/line.gif" alt="">
+                            <img src="/css/images/line.gif" alt="">
+                            <img id="webOrgTreeImg-e7353-9" src="/css/images/joinbottom.gif" alt="">
+                            <input id="categories-e7353-9" type="checkbox" name="categories[]" value="9"  >
+                            <span style="cursor: pointer;">     Holmen Fotball - G08 1</span>
 
                         </div>
+                    </div>
 
-                        <div id="webOrgTreeDiv-e7353-6" class="clip" data-nodeid="6">
+                    <div class="dTreeNode">
 
-                            <div class="dTreeNode">
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-10" src="/css/images/join.gif" alt="">
+                        <input id="categories-e7353-10" type="checkbox" name="categories[]" value="10">
+                        <span style="cursor: pointer;">   Holmen Fotball - G10 2</span>
 
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-8" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-8',0)" alt="">
-                                <input id="categories-e7353-8" type="checkbox" name="categories[]" value="8">
-                                <span onclick="javascript: openCloseFormTree('e7353-8',0)" style="cursor: pointer;">   Holmen Fotball - G10 1</span>
+                    </div>
 
-                            </div>
+                    <div class="dTreeNode">
 
-                            <div id="webOrgTreeDiv-e7353-8" class="clip" style="" data-nodeid="8">
-                                <div class="dTreeNode">
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-7" src="/css/images/joinbottom.gif" alt="">
+                        <input id="categories-e7353-7" type="checkbox" name="categories[]" value="7"  >
+                        <span style="cursor: pointer;">   Holmen Fotball - G11 1</span>
 
-                                    <img src="/css/images/line.gif" alt="">
-                                    <img src="/css/images/line.gif" alt="">
-                                    <img id="webOrgTreeImg-e7353-9" src="/css/images/joinbottom.gif" alt="">
-                                    <input id="categories-e7353-9" type="checkbox" name="categories[]" value="9"  >
-                                    <span style="cursor: pointer;">     Holmen Fotball - G08 1</span>
+                    </div>
 
-                                </div>
-                            </div>
-
-                            <div class="dTreeNode">
-
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-10" src="/css/images/join.gif" alt="">
-                                <input id="categories-e7353-10" type="checkbox" name="categories[]" value="10">
-                                <span style="cursor: pointer;">   Holmen Fotball - G10 2</span>
-
-                            </div>
-
-                            <div class="dTreeNode">
-
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-7" src="/css/images/joinbottom.gif" alt="">
-                                <input id="categories-e7353-7" type="checkbox" name="categories[]" value="7"  >
-                                <span style="cursor: pointer;">   Holmen Fotball - G11 1</span>
-
-                            </div>
-
-                        </div>
+                </div>
 
 
+                <div class="dTreeNode">
+                    
+                    <img id="webOrgTreeImg-e7353-6" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-6',0)" alt="">
+                    <input id="categories-e7353-6" type="checkbox" name="categories[]" value="6">
+                    <span onclick="javascript: openCloseFormTree('e7353-6',0)" style="cursor: pointer;">Holmen Basketball</span>
+
+                </div>
+
+                <div id="webOrgTreeDiv-e7353-6" class="clip" data-nodeid="6">
+
+                    <div class="dTreeNode">
+
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-8" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-8',0)" alt="">
+                        <input id="categories-e7353-8" type="checkbox" name="categories[]" value="8">
+                        <span onclick="javascript: openCloseFormTree('e7353-8',0)" style="cursor: pointer;">   Holmen Basketball - G10 1</span>
+
+                    </div>
+
+                    <div id="webOrgTreeDiv-e7353-8" class="clip" style="" data-nodeid="8">
                         <div class="dTreeNode">
-                            
-                            <img id="webOrgTreeImg-e7353-6" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-6',0)" alt="">
-                            <input id="categories-e7353-6" type="checkbox" name="categories[]" value="6">
-                            <span onclick="javascript: openCloseFormTree('e7353-6',0)" style="cursor: pointer;">Holmen Basketball</span>
+
+                            <img src="/css/images/line.gif" alt="">
+                            <img src="/css/images/line.gif" alt="">
+                            <img id="webOrgTreeImg-e7353-9" src="/css/images/joinbottom.gif" alt="">
+                            <input id="categories-e7353-9" type="checkbox" name="categories[]" value="9"  >
+                            <span style="cursor: pointer;">     Holmen Basketball - G08 1</span>
 
                         </div>
+                    </div>
 
-                        <div id="webOrgTreeDiv-e7353-6" class="clip" data-nodeid="6">
+                    <div class="dTreeNode">
 
-                            <div class="dTreeNode">
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-10" src="/css/images/join.gif" alt="">
+                        <input id="categories-e7353-10" type="checkbox" name="categories[]" value="10">
+                        <span style="cursor: pointer;">   Holmen Basketball - G10 2</span>
 
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-8" src="/css/images/minus.gif" style="cursor: pointer;" onclick="javascript: openCloseFormTree('e7353-8',0)" alt="">
-                                <input id="categories-e7353-8" type="checkbox" name="categories[]" value="8">
-                                <span onclick="javascript: openCloseFormTree('e7353-8',0)" style="cursor: pointer;">   Holmen Basketball - G10 1</span>
+                    </div>
 
-                            </div>
+                    <div class="dTreeNode">
 
-                            <div id="webOrgTreeDiv-e7353-8" class="clip" style="" data-nodeid="8">
-                                <div class="dTreeNode">
+                        <img src="/css/images/line.gif" alt="">
+                        <img id="webOrgTreeImg-e7353-7" src="/css/images/joinbottom.gif" alt="">
+                        <input id="categories-e7353-7" type="checkbox" name="categories[]" value="7"  >
+                        <span style="cursor: pointer;">   Holmen Basketball - G11 1</span>
 
-                                    <img src="/css/images/line.gif" alt="">
-                                    <img src="/css/images/line.gif" alt="">
-                                    <img id="webOrgTreeImg-e7353-9" src="/css/images/joinbottom.gif" alt="">
-                                    <input id="categories-e7353-9" type="checkbox" name="categories[]" value="9"  >
-                                    <span style="cursor: pointer;">     Holmen Basketball - G08 1</span>
+                    </div>
 
-                                </div>
-                            </div>
+                </div>
 
-                            <div class="dTreeNode">
+            </dd>
 
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-10" src="/css/images/join.gif" alt="">
-                                <input id="categories-e7353-10" type="checkbox" name="categories[]" value="10">
-                                <span style="cursor: pointer;">   Holmen Basketball - G10 2</span>
 
-                            </div>
 
-                            <div class="dTreeNode">
+        </div>
+        <div id="config-types" class="pop-tab">
 
-                                <img src="/css/images/line.gif" alt="">
-                                <img id="webOrgTreeImg-e7353-7" src="/css/images/joinbottom.gif" alt="">
-                                <input id="categories-e7353-7" type="checkbox" name="categories[]" value="7"  >
-                                <span style="cursor: pointer;">   Holmen Basketball - G11 1</span>
+            <dt id="types-label">
+                    <b>Select event types that You are interested in</b> <p style="display:inline;font-size:12px;">(click on a name)</p></dt>
+            <dd id="types-element">
 
-                            </div>
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-1" src="/css/images/join.gif" alt="">
+                    <input id="types-9fc7f-1" type="checkbox" name="types[]" value="1" checked="checked">
+                    <span style="cursor: pointer;">Offisiell Kamp/Renn/Konkurranse</span>
+                </div>
 
-                        </div>
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-2" src="/css/images/join.gif" alt="">
+                    <input id="types-9fc7f-2" type="checkbox" name="types[]" value="2" checked="checked">
+                    <span style="cursor: pointer;">Trenings- Kamp/Renn/Konkurranse</span>
+                </div>
 
-                    </dd>
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-3" src="/css/images/join.gif" alt="">
+                    <input id="types-9fc7f-3" type="checkbox" name="types[]" value="3" checked="checked">
+                    <span style="cursor: pointer;">Turnering/Cup</span>
+                </div>
 
-                </td>
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-4" src="/css/images/join.gif" alt="">
+                    <input id="types-9fc7f-4" type="checkbox" name="types[]" value="4" checked="checked">
+                    <span style="cursor: pointer;">Samling/Reise</span>
+                </div>
 
-                <td class="pop-main-tree2">
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-5" src="/css/images/join.gif" alt="">
+                    <input id="types-9fc7f-5" type="checkbox" name="types[]" value="5" checked="checked">
+                    <span style="cursor: pointer;">Sosialt</span>
+                </div>
 
-                    <dt id="types-label">
-                            <b>Select event types that You are interested in</b> <p style="display:inline;font-size:12px;">(click on a name)</p></dt>
-                    <dd id="types-element">
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-6" src="/css/images/join.gif" alt="">
+                    <input id="types-9fc7f-6" type="checkbox" name="types[]" value="6" checked="checked">
+                    <span style="cursor: pointer;">Kurs</span>
+                </div>
 
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-1" src="/css/images/join.gif" alt="">
-                            <input id="types-9fc7f-1" type="checkbox" name="types[]" value="1" checked="checked">
-                            <span style="cursor: pointer;">Offisiell Kamp/Renn/Konkurranse</span>
-                        </div>
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-7" src="/css/images/join.gif" alt="">
+                    <input id="types-9fc7f-7" type="checkbox" name="types[]" value="7" checked="checked">
+                    <span style="cursor: pointer;">Møte</span>
+                </div>
 
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-2" src="/css/images/join.gif" alt="">
-                            <input id="types-9fc7f-2" type="checkbox" name="types[]" value="2" checked="checked">
-                            <span style="cursor: pointer;">Trenings- Kamp/Renn/Konkurranse</span>
-                        </div>
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-8" src="/css/images/join.gif" alt="">
+                    <input id="types-9fc7f-8" type="checkbox" name="types[]" value="8" checked="checked">
+                    <span style="cursor: pointer;">Trening</span>
+                </div>
 
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-3" src="/css/images/join.gif" alt="">
-                            <input id="types-9fc7f-3" type="checkbox" name="types[]" value="3" checked="checked">
-                            <span style="cursor: pointer;">Turnering/Cup</span>
-                        </div>
+                <div class="dTreeNode">
+                    <img id="webOrgTreeImg-9fc7f-9" src="/css/images/joinbottom.gif" alt="">
+                    <input id="types-9fc7f-9" type="checkbox" name="types[]" value="9" checked="checked">
+                    <span style="cursor: pointer;">Annet</span>
+                </div>
 
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-4" src="/css/images/join.gif" alt="">
-                            <input id="types-9fc7f-4" type="checkbox" name="types[]" value="4" checked="checked">
-                            <span style="cursor: pointer;">Samling/Reise</span>
-                        </div>
-
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-5" src="/css/images/join.gif" alt="">
-                            <input id="types-9fc7f-5" type="checkbox" name="types[]" value="5" checked="checked">
-                            <span style="cursor: pointer;">Sosialt</span>
-                        </div>
-
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-6" src="/css/images/join.gif" alt="">
-                            <input id="types-9fc7f-6" type="checkbox" name="types[]" value="6" checked="checked">
-                            <span style="cursor: pointer;">Kurs</span>
-                        </div>
-
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-7" src="/css/images/join.gif" alt="">
-                            <input id="types-9fc7f-7" type="checkbox" name="types[]" value="7" checked="checked">
-                            <span style="cursor: pointer;">Møte</span>
-                        </div>
-
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-8" src="/css/images/join.gif" alt="">
-                            <input id="types-9fc7f-8" type="checkbox" name="types[]" value="8" checked="checked">
-                            <span style="cursor: pointer;">Trening</span>
-                        </div>
-
-                        <div class="dTreeNode">
-                            <img id="webOrgTreeImg-9fc7f-9" src="/css/images/joinbottom.gif" alt="">
-                            <input id="types-9fc7f-9" type="checkbox" name="types[]" value="9" checked="checked">
-                            <span style="cursor: pointer;">Annet</span>
-                        </div>
-
-                    </dd>
-
-                </td>
-
-            </tr>
-
-        </tbody>
-
-    </table>
+            </dd>
+    </div>
 
     <div class="pop-main-absbut">
         <button id="addcalendar" class="btn">SAVE SETTINGS</button>

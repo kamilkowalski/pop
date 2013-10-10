@@ -45,6 +45,12 @@
       that.hide();
     });
 
+    that.$element.on("click", "[data-tabs] a", function(e){
+      e.preventDefault();
+      $(this).parent().siblings().removeClass("active").end().addClass("active");
+      $($(this).attr("href")).siblings().removeClass("active").end().addClass("active");
+    });
+
     setTimeout($.proxy(function(){
       this.$backdrop.addClass("in").attr("aria-hidden", false);
       this.$element.addClass("in").attr("aria-hidden", false);
