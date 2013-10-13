@@ -142,4 +142,23 @@
     $.ajax($(this).attr("href"));
   });
 
+  $(document).on("submit", ".pop form[data-remote]", function(e){
+    e.preventDefault();
+    var form = $(this);
+    
+    $.ajax(form.attr("action"), {
+      data: form.serialize(),
+      type: (form.attr("method") || "POST"),
+      success: function(data, status, jqxhr){
+        form.trigger("pop:success", [data, status, jqxhr]);
+      },
+      complete: function(jqxhr, status){
+        form.trigger("pop:complete", [jqxhr, status]);
+      },
+      error: function(jqxhr, status, error){
+        form.trigger("pop:error", [jqxhr, status, error]);
+      }
+    });
+  });
+
 })(window.jQuery);

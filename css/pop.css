@@ -234,3 +234,32 @@ body.pop-open {
   z-index: 1070; }
   .pop-backdrop.in {
     opacity: 0.7; }
+
+.pop-button {
+  text-align: center;
+  background-color: #a1a1a1;
+  border: 0 none;
+  color: white;
+  display: inline-block;
+  padding: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+  .pop-button:hover {
+    background-color: #888888; }
+
+.pop-button-green {
+  background-color: #3fa64e; }
+  .pop-button-green:hover {
+    background-color: #31813d; }
+
+.pop-button-red {
+  background-color: #e33f30; }
+  .pop-button-red:hover {
+    background-color: #c5291b; }

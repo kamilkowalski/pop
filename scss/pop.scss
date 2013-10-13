@@ -237,3 +237,39 @@ body.pop-open {
     opacity: 0.7;
   }
 }
+
+.pop-button {
+  text-align: center;
+  background-color: $button-bg;
+  border: 0 none;
+  color: $button-text;
+  display: inline-block;
+  padding: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.1s linear;
+     -moz-transition: background-color 0.1s linear;
+       -o-transition: background-color 0.1s linear;
+          transition: background-color 0.1s linear;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+
+  &:hover {
+    background-color: darken($button-bg, 10%);
+  }
+}
+
+.pop-button-green {
+  background-color: $button-bg-green;
+  &:hover {
+    background-color: darken($button-bg-green, 10%);
+  }
+}
+
+.pop-button-red {
+  background-color: $button-bg-red;
+  &:hover {
+    background-color: darken($button-bg-red, 10%);
+  }
+}
