@@ -247,8 +247,7 @@ body.pop-open {
     width: 660px;
     background-color: white;
     padding: 0;
-    float: left;
-    overflow-y: scroll; }
+    float: left; }
     .pop > .pop-dialog > .pop-output .pop-messages .pop-body ul.pop-conversation {
       margin: 25px;
       padding: 20px 10x 10px;
