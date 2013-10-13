@@ -1,0 +1,381 @@
+@import "variables";
+@import "mixins";
+
+// Calendar screen - events
+.pop {
+  > .pop-dialog {
+    > .pop-output {
+      > .pop-calendar {
+        @include clearfix;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow-y: auto;
+        height: 100%;
+        white-space: visible;
+        display: none;
+      }
+
+      .pop-calendar.active {
+
+        display: block;
+
+        > * {
+          float: left;
+        }
+
+        > table {
+
+          width: 100%;
+          background: $background-calendar1;
+          margin-top: 20px;
+
+          > thead {
+
+            width: 100%;
+
+            > tr {
+
+              padding-left: 50px;
+
+              > th:first-child {
+                padding-left: 65px;
+                font-size: 20px;
+                color: #737373;
+                text-align: left;
+                background: $background-calendar2;
+              }
+
+              th {
+
+                padding-bottom: 23px;
+                padding-top: 7px;
+
+                > div.pop-main-today {
+                  font-size: 14px;
+                  display: inline;
+                  font-weight: normal;
+                }
+              }
+            }
+          }
+
+          > tbody {
+
+            width: 100%;
+
+            > tr {
+
+              padding-left: 50px;
+              border-top: 1px solid #ededed;
+
+              > td:first-child {
+                padding-left: 65px;
+                padding-right: 20px;
+                white-space: nowrap;
+                width: 100px;
+                font-size: 20px;
+                font-weight: bold;
+                color: #737373;
+                padding-bottom: 28px;
+                padding-top: 12px;
+                background: $background-calendar;
+              }
+
+              td {
+
+                padding-bottom: 20px;
+                padding-top: 20px;
+
+                > div.pop-main-eventname {
+                  color: #c0493f;
+                  padding-left: 20px;
+                  padding-right: 20px;
+                  font-weight: bold;
+                }
+
+                div.pop-main-cat {
+                  padding-left: 20px;
+                  padding-right: 20px;
+                  font-size: 11px;
+                  color: #737373;
+                }
+              }
+
+              td.pop-main-hour {
+
+                text-align: right;
+                width: 108px;
+                font-size: 11px;
+
+                > div.pop-main-hour-box {
+
+                  border-left: 1px solid #d6d6d6;
+                  border-right: 1px solid #d6d6d6;
+                  padding-right: 20px;
+
+                  > div.pop-main-str {
+                    margin-bottom: 5px;
+                    color: #9d9d9d;
+                  }
+
+                  p {
+                    font-weight: bold;
+                    color: #737373;
+                    display: inline;
+                    margin-left: 5px;
+                  }
+
+                  > div.pop-main-stp {
+                    margin-bottom: 0px;
+                    color: #9d9d9d;
+                  }
+
+                  p {
+                    font-weight: bold;
+                    color: #737373;
+                    display: inline;
+                    margin-left: 5px;
+                  }
+                }
+              }
+
+              td.pop-main-more {
+
+                text-align: right;
+                width: 119px;
+
+                > a {
+                  color: #989898;
+                  border: 2px solid #d0d0d0;
+                  border-radius: 4px;
+                  padding: 6px 12px;
+                  font-weight: bold;
+                  font-size: 12px;
+                  text-decoration: none;
+                  width: 90px;
+                  display: inline-block;
+                  text-align: center;
+                  cursor: pointer;
+                }
+
+                > a:hover {
+                  color: #8d8d8d;
+                  border: 2px solid #989898;
+                }
+              }
+            }
+
+            tr:first-child {
+              border-top: 2px solid #c9c9ca;
+            }
+
+            tr.pop-main-repeat {
+
+              background: none;
+              padding-left: 50px;
+              border-top: 0px;
+
+              > td:first-child {
+                color: white;
+                border-top: 0px;
+              }
+
+              td {
+                border-top: 1px solid #ededed;
+                padding-top: 30px;
+              }
+            }
+
+            tr.pop-main-more.active {
+              display: table-row;
+            }
+
+            tr.pop-main-more {
+
+              border-top: 0px;
+              display: none;
+              position: relative;
+
+              > td.pop-main-more-buttons {
+
+                text-align: right;
+
+                > a {
+                  padding: 6px 12px;
+                  border-radius: 4px;
+                  font-size: 12px;
+                  line-height: 17px;
+                  color: #ffffff;
+                  font-weight: bold;
+                  width: 94px;
+                  display: inline-block;
+                  text-align: center;
+                  margin-bottom: 10px;
+                  cursor: pointer;
+                }
+
+                a.pop-main-regbutton {
+                  background: #82ca77;
+                }
+
+                a.pop-main-partbutton {
+                  background: #58acb5;
+                }
+
+                a.pop-main-occbutton {
+                  background: #58acb5;
+                }
+              }
+
+              td.pop-main-more-desc {
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 11px;
+              }
+
+              td {
+                padding-top: 0px;
+              }
+
+              td:first-child {
+                background: $background-calendar1;
+              }
+            }
+
+            tr.openedbox {
+              > td {
+                padding-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Calendar screen - configuration
+.pop {
+  > .pop-dialog {
+    > .pop-output{
+      > .pop-configuration {
+
+        @include clearfix;
+        height: 100%;
+        white-space: visible;
+        padding-top: 0px;
+        position: relative;
+
+        .pop-body {
+
+          padding: 0;
+
+          &.pop-scrollable {
+            overflow-y: scroll;
+          }
+
+          .pop-tab {
+
+            margin: 10px;
+          
+            > dt {
+              font-size: 16px;
+              margin-bottom: 20px;
+              margin-top: 30px;
+              margin-left: 20px;
+              color: #858585;
+            }
+
+            > dd {
+
+              margin-left: 20px;
+              margin-right: 20px;
+              line-height: 30px;
+              padding-bottom: 70px;
+              border-top: 1px solid #d9d9d9;
+
+              div.dTreeNode {
+                border-bottom: 1px solid #d9d9d9;
+                padding-left: 10px;
+                cursor: pointer;
+              }
+
+              div.dTreeNode.chosen {
+                border-bottom: 1px solid #d9d9d9;
+                padding-left: 10px;
+                background: $background-sett-yes;
+              }
+
+              > div.dTreeNode {
+
+                padding-left: 10px;
+
+                > span {
+                  color: #e3402e;
+                  font-size: 12px;
+                  font-weight: bold;
+                  margin-left: 5px;
+                }
+              }
+
+              input {
+                float: right;
+                margin-right: 10px;
+                margin-top: 8px;
+                opacity: 0.00;
+              }
+            }
+          }
+        }     
+      }
+
+      div.pop-main-absbut {
+
+        position: fixed;
+        width: 643px;
+        height: 59px;
+        right: auto;
+        left: auto;
+        bottom: 20px;
+        background: url("images/barshade.png") repeat-x scroll left top transparent;
+
+        > button {
+          background: #3fa74f;
+          border: 0px;
+          border-radius: 4px 4px 4px 4px;
+          color: #FFFFFF;
+          display: inline-block;
+          font-size: 12px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          padding: 6px 15px;
+          text-align: center;
+          line-height: 22px;
+          float: right;
+          margin-top: 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.pop {
+  > .pop-dialog {
+    > .pop-output {
+      > .pop-myevents {
+        @include clearfix;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow-y: auto;
+        height: 100%;
+        white-space: visible;
+        display: none;
+      }
+
+      .pop-calendar.active {
+        display: block;
+      }
+    }
+  }
+}

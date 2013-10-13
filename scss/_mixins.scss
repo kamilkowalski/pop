@@ -1,0 +1,49 @@
+@mixin fade {
+  -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+     -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+       -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+          transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
+}
+
+@mixin fullscreen {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin box-shadow($vars...) {
+  -webkit-box-shadow: $vars;
+     -moz-box-shadow: $vars;
+          box-shadow: $vars;
+}
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin menu {
+  @include clearfix;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+   > li {
+    display: block;
+    float: left;
+
+    a, a:visited, a:active {
+      padding: 0 15px;
+      display: inline-block;
+    }
+  }
+}
