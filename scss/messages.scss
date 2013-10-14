@@ -128,11 +128,9 @@
         .post-container {
           margin: 25px;
           padding: 20px 10x 10px;
-          display: table;
-          border-collapse: collapse;
           list-style-type: none;
 
-          > .message-conatiner {
+          .message-conatiner {
             border-top: 1px solid $background-body-dark;
             margin-right: 80px;
 
@@ -147,6 +145,11 @@
 
             > .avatar-container {
               padding: 15px 15px 0 0;
+
+              img {
+                height: 50px;
+                width: 50px;
+              }
             }
 
             > .message-content {
@@ -194,8 +197,13 @@
             }
 
             .c-avatar {
-            float: left;
-            margin-right: 15px;
+              float: left;
+              margin-right: 15px;
+
+              img {
+                height: 50px;
+                width: 50px;
+              }
             }
 
             .comment-author {

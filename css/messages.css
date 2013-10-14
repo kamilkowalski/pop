@@ -83,33 +83,34 @@
 .pop > .pop-dialog > .pop-output > .pop-messages .post-container {
   margin: 25px;
   padding: 20px 10x 10px;
-  display: table;
-  border-collapse: collapse;
   list-style-type: none; }
-  .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner {
+  .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner {
     border-top: 1px solid #dddddd;
     margin-right: 80px; }
-    .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner:first-child {
+    .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner:first-child {
       border-top: 0 none; }
-    .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner > * {
+    .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner > * {
       display: table-cell;
       vertical-align: top; }
-    .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner > .avatar-container {
+    .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner > .avatar-container {
       padding: 15px 15px 0 0; }
-    .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner > .message-content {
+      .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner > .avatar-container img {
+        height: 50px;
+        width: 50px; }
+    .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner > .message-content {
       padding: 15px 0 15px 0; }
-      .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner > .message-content > .u-name {
+      .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner > .message-content > .u-name {
         font-weight: bold; }
-      .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner > .message-content > .u-date {
+      .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner > .message-content > .u-date {
         font-size: 11px;
         font-weight: bold;
         color: #aeaeae;
         margin-left: 5px; }
-      .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner > .message-content > .u-message {
+      .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner > .message-content > .u-message {
         color: #999999;
         font-size: 90%;
         margin-top: 3px; }
-    .pop > .pop-dialog > .pop-output > .pop-messages .post-container > .message-conatiner > .message-bottom-panel {
+    .pop > .pop-dialog > .pop-output > .pop-messages .post-container .message-conatiner > .message-bottom-panel {
       display: block; }
 .pop > .pop-dialog > .pop-output > .pop-messages .post-comments {
   margin-right: 80px; }
@@ -124,6 +125,9 @@
     .pop > .pop-dialog > .pop-output > .pop-messages .post-comments .comment-container .c-avatar {
       float: left;
       margin-right: 15px; }
+      .pop > .pop-dialog > .pop-output > .pop-messages .post-comments .comment-container .c-avatar img {
+        height: 50px;
+        width: 50px; }
     .pop > .pop-dialog > .pop-output > .pop-messages .post-comments .comment-container .comment-author {
       font-weight: bold;
       color: #858585; }
