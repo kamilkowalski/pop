@@ -115,6 +115,8 @@
       display: none; }
       .pop > .pop-dialog > .pop-output .pop-tab.active {
         display: block; }
+      .pop > .pop-dialog > .pop-output .pop-tab.pop-tab-sidebar.active {
+        display: table; }
     .pop > .pop-dialog > .pop-output > .pop-submenu {
       *zoom: 1;
       list-style-type: none;

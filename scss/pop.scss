@@ -106,6 +106,10 @@
         &.active {
           display: block;
         }
+
+        &.pop-tab-sidebar.active {
+          display: table;
+        }
       }
 
       > .pop-submenu {
