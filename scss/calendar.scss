@@ -23,7 +23,7 @@
           float: left;
         }
 
-        > table {
+        table.timeline {
 
           width: 100%;
           background: $background-calendar1;
@@ -43,6 +43,7 @@
                 color: #737373;
                 text-align: left;
                 background: $background-calendar2;
+                line-height: 1.4em;
               }
 
               th {
@@ -79,6 +80,7 @@
                 padding-bottom: 28px;
                 padding-top: 12px;
                 background: $background-calendar;
+                line-height: 1.8em;
               }
 
               td {
@@ -112,6 +114,7 @@
                   border-left: 1px solid #d6d6d6;
                   border-right: 1px solid #d6d6d6;
                   padding-right: 20px;
+                  text-transform: uppercase;
 
                   > div.pop-main-str {
                     margin-bottom: 5px;
@@ -278,7 +281,7 @@
 
             margin: 10px;
           
-            > dt {
+            dt {
               font-size: 16px;
               margin-bottom: 20px;
               margin-top: 30px;
@@ -286,7 +289,7 @@
               color: #858585;
             }
 
-            > dd {
+            dd {
 
               margin-left: 20px;
               margin-right: 20px;
@@ -319,10 +322,9 @@
               }
 
               input {
-                float: right;
-                margin-right: 10px;
-                margin-top: 8px;
-                opacity: 0.00;
+                visibility: hidden;
+                position: absolute;
+                left: -99999px;
               }
             }
           }
@@ -331,12 +333,11 @@
 
       div.pop-main-absbut {
 
-        position: fixed;
-        width: 643px;
+        position: absolute;
+        width: 660px;
         height: 59px;
         right: auto;
-        left: auto;
-        bottom: 20px;
+        bottom: 0;
         background: url("images/barshade.png") repeat-x scroll left top transparent;
 
         > button {

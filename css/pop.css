@@ -117,6 +117,8 @@
         display: block; }
       .pop > .pop-dialog > .pop-output .pop-tab.pop-tab-sidebar.active {
         display: table; }
+      .pop > .pop-dialog > .pop-output .pop-tab.pop-tab-sidebar .pop-body {
+        width: 660px; }
     .pop > .pop-dialog > .pop-output > .pop-submenu {
       *zoom: 1;
       list-style-type: none;
@@ -159,24 +161,24 @@
         border-left-color: white; }
     .pop > .pop-dialog > .pop-output > .pop-main {
       font-size: 13px; }
-      .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar {
+      .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar {
         *zoom: 1;
         width: 240px;
         float: left;
         background: #f7f7f7;
         direction: rtl; }
-        .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar:before, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar:after {
+        .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar:before, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar:after {
           content: " ";
           display: table; }
-        .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar:after {
+        .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar:after {
           clear: both; }
-        .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul {
+        .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul {
           list-style-type: none;
           margin: 0px;
           margin-right: 0;
           padding: 0 0 30px;
           direction: ltr; }
-          .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:visited, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:active {
+          .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:visited, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:active {
             *zoom: 1;
             -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
             -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
@@ -186,32 +188,33 @@
             padding: 15px 0;
             color: #858585;
             text-decoration: none; }
-            .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:before, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:after, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:visited:before, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:visited:after, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:active:before, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:active:after {
+            .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:before, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:after, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:visited:before, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:visited:after, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:active:before, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:active:after {
               content: " ";
               display: table; }
-            .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:after, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:visited:after, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:active:after {
+            .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:after, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:visited:after, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:active:after {
               clear: both; }
-            .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a img, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:visited img, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:active img {
+            .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a img, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:visited img, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:active img {
               float: left;
               margin-right: 15px; }
-            .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a strong, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:visited strong, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul a:active strong {
+            .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a strong, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:visited strong, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul a:active strong {
               display: block; }
-          .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul > li {
+          .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul > li {
             -webkit-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
             -moz-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
             -o-transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
             transition: opacity 0.1s linear, top 0.1s ease-out, background-color 0.1s linear;
             border-right: 1px solid #dedede; }
-            .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul > li.active, .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul > li:hover {
+            .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul > li.active, .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul > li:hover {
               background-color: white;
               border-right: 1px solid #ffffff; }
-            .pop > .pop-dialog > .pop-output > .pop-main > .pop-sidebar > ul > li a {
+            .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar > ul > li a {
               border-bottom: 1px solid #dedede;
               margin-left: 20px;
               margin-right: 20px; }
       .pop > .pop-dialog > .pop-output > .pop-main .pop-scrollable {
-        overflow: auto;
-        height: 100%; }
+        overflow: auto; }
+        .pop > .pop-dialog > .pop-output > .pop-main .pop-scrollable.pop-sidebar {
+          height: 100%; }
       .pop > .pop-dialog > .pop-output > .pop-main > .pop-body {
         padding: 10px; }
   .pop.pop-flex > .pop-dialog {

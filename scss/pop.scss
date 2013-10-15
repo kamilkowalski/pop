@@ -107,8 +107,14 @@
           display: block;
         }
 
-        &.pop-tab-sidebar.active {
-          display: table;
+        &.pop-tab-sidebar {
+          &.active {
+            display: table;
+          }
+
+          .pop-body {
+            width: 660px;
+          }
         }
       }
 
@@ -154,7 +160,7 @@
       > .pop-main {
         font-size: $body-font-size;
 
-        > .pop-sidebar {
+        .pop-sidebar {
           @include clearfix;
           width: 240px;
           float: left;
@@ -207,7 +213,10 @@
 
         .pop-scrollable {
           overflow: auto;
-          height: 100%;
+
+          &.pop-sidebar {
+            height: 100%;
+          }
         }
 
         > .pop-body {

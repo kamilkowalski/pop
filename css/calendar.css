@@ -15,33 +15,34 @@
   display: block; }
   .pop > .pop-dialog > .pop-output .pop-calendar.active > * {
     float: left; }
-  .pop > .pop-dialog > .pop-output .pop-calendar.active > table {
+  .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline {
     width: 100%;
     background: url("images/calendarbg1.png") repeat-y scroll left top transparent;
     margin-top: 20px; }
-    .pop > .pop-dialog > .pop-output .pop-calendar.active > table > thead {
+    .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > thead {
       width: 100%; }
-      .pop > .pop-dialog > .pop-output .pop-calendar.active > table > thead > tr {
+      .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > thead > tr {
         padding-left: 50px; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > thead > tr > th:first-child {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > thead > tr > th:first-child {
           padding-left: 65px;
           font-size: 20px;
           color: #737373;
           text-align: left;
-          background: url("images/calendartop.png") no-repeat scroll left top transparent; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > thead > tr th {
+          background: url("images/calendartop.png") no-repeat scroll left top transparent;
+          line-height: 1.4em; }
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > thead > tr th {
           padding-bottom: 23px;
           padding-top: 7px; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > thead > tr th > div.pop-main-today {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > thead > tr th > div.pop-main-today {
             font-size: 14px;
             display: inline;
             font-weight: normal; }
-    .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody {
+    .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody {
       width: 100%; }
-      .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr {
+      .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr {
         padding-left: 50px;
         border-top: 1px solid #ededed; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr > td:first-child {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr > td:first-child {
           padding-left: 65px;
           padding-right: 20px;
           white-space: nowrap;
@@ -51,48 +52,50 @@
           color: #737373;
           padding-bottom: 28px;
           padding-top: 12px;
-          background: url("images/calendarbg.png") no-repeat scroll left top transparent; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td {
+          background: url("images/calendarbg.png") no-repeat scroll left top transparent;
+          line-height: 1.8em; }
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td {
           padding-bottom: 20px;
           padding-top: 20px; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td > div.pop-main-eventname {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td > div.pop-main-eventname {
             color: #c0493f;
             padding-left: 20px;
             padding-right: 20px;
             font-weight: bold; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td div.pop-main-cat {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td div.pop-main-cat {
             padding-left: 20px;
             padding-right: 20px;
             font-size: 11px;
             color: #737373; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-hour {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-hour {
           text-align: right;
           width: 108px;
           font-size: 11px; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-hour > div.pop-main-hour-box {
             border-left: 1px solid #d6d6d6;
             border-right: 1px solid #d6d6d6;
-            padding-right: 20px; }
-            .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box > div.pop-main-str {
+            padding-right: 20px;
+            text-transform: uppercase; }
+            .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-hour > div.pop-main-hour-box > div.pop-main-str {
               margin-bottom: 5px;
               color: #9d9d9d; }
-            .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box p {
+            .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-hour > div.pop-main-hour-box p {
               font-weight: bold;
               color: #737373;
               display: inline;
               margin-left: 5px; }
-            .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box > div.pop-main-stp {
+            .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-hour > div.pop-main-hour-box > div.pop-main-stp {
               margin-bottom: 0px;
               color: #9d9d9d; }
-            .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-hour > div.pop-main-hour-box p {
+            .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-hour > div.pop-main-hour-box p {
               font-weight: bold;
               color: #737373;
               display: inline;
               margin-left: 5px; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-more {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-more {
           text-align: right;
           width: 119px; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-more > a {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-more > a {
             color: #989898;
             border: 2px solid #d0d0d0;
             border-radius: 4px;
@@ -104,30 +107,30 @@
             display: inline-block;
             text-align: center;
             cursor: pointer; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody > tr td.pop-main-more > a:hover {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td.pop-main-more > a:hover {
             color: #8d8d8d;
             border: 2px solid #989898; }
-      .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr:first-child {
+      .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr:first-child {
         border-top: 2px solid #c9c9ca; }
-      .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-repeat {
+      .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-repeat {
         background: none;
         padding-left: 50px;
         border-top: 0px; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-repeat > td:first-child {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-repeat > td:first-child {
           color: white;
           border-top: 0px; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-repeat td {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-repeat td {
           border-top: 1px solid #ededed;
           padding-top: 30px; }
-      .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more.active {
+      .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more.active {
         display: table-row; }
-      .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more {
+      .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more {
         border-top: 0px;
         display: none;
         position: relative; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more > td.pop-main-more-buttons {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons {
           text-align: right; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more > td.pop-main-more-buttons > a {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons > a {
             padding: 6px 12px;
             border-radius: 4px;
             font-size: 12px;
@@ -139,21 +142,21 @@
             text-align: center;
             margin-bottom: 10px;
             cursor: pointer; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-regbutton {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-regbutton {
             background: #82ca77; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-partbutton {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-partbutton {
             background: #58acb5; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-occbutton {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-occbutton {
             background: #58acb5; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more td.pop-main-more-desc {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more td.pop-main-more-desc {
           padding-left: 20px;
           padding-right: 20px;
           font-size: 11px; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more td {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more td {
           padding-top: 0px; }
-        .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.pop-main-more td:first-child {
+        .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more td:first-child {
           background: url("images/calendarbg1.png") repeat-y scroll left top transparent; }
-      .pop > .pop-dialog > .pop-output .pop-calendar.active > table > tbody tr.openedbox > td {
+      .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.openedbox > td {
         padding-bottom: 0px; }
 
 .pop > .pop-dialog > .pop-output > .pop-configuration {
@@ -173,45 +176,43 @@
       overflow-y: scroll; }
     .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab {
       margin: 10px; }
-      .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab > dt {
+      .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab dt {
         font-size: 16px;
         margin-bottom: 20px;
         margin-top: 30px;
         margin-left: 20px;
         color: #858585; }
-      .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab > dd {
+      .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab dd {
         margin-left: 20px;
         margin-right: 20px;
         line-height: 30px;
         padding-bottom: 70px;
         border-top: 1px solid #d9d9d9; }
-        .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab > dd div.dTreeNode {
+        .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab dd div.dTreeNode {
           border-bottom: 1px solid #d9d9d9;
           padding-left: 10px;
           cursor: pointer; }
-        .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab > dd div.dTreeNode.chosen {
+        .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab dd div.dTreeNode.chosen {
           border-bottom: 1px solid #d9d9d9;
           padding-left: 10px;
           background: url("images/yes.png") no-repeat scroll right top #e8fbe9; }
-        .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab > dd > div.dTreeNode {
+        .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab dd > div.dTreeNode {
           padding-left: 10px; }
-          .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab > dd > div.dTreeNode > span {
+          .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab dd > div.dTreeNode > span {
             color: #e3402e;
             font-size: 12px;
             font-weight: bold;
             margin-left: 5px; }
-        .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab > dd input {
-          float: right;
-          margin-right: 10px;
-          margin-top: 8px;
-          opacity: 0.00; }
+        .pop > .pop-dialog > .pop-output > .pop-configuration .pop-body .pop-tab dd input {
+          visibility: hidden;
+          position: absolute;
+          left: -99999px; }
 .pop > .pop-dialog > .pop-output div.pop-main-absbut {
-  position: fixed;
-  width: 643px;
+  position: absolute;
+  width: 660px;
   height: 59px;
   right: auto;
-  left: auto;
-  bottom: 20px;
+  bottom: 0;
   background: url("images/barshade.png") repeat-x scroll left top transparent; }
   .pop > .pop-dialog > .pop-output div.pop-main-absbut > button {
     background: #3fa74f;
