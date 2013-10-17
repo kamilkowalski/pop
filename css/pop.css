@@ -118,6 +118,8 @@
       .pop > .pop-dialog > .pop-output .pop-tab.pop-tab-sidebar.active {
         display: table; }
       .pop > .pop-dialog > .pop-output .pop-tab.pop-tab-sidebar .pop-body {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         width: 660px; }
     .pop > .pop-dialog > .pop-output > .pop-submenu {
       *zoom: 1;
@@ -160,7 +162,8 @@
       .pop > .pop-dialog > .pop-output > .pop-submenu > li.active + li a {
         border-left-color: white; }
     .pop > .pop-dialog > .pop-output > .pop-main {
-      font-size: 13px; }
+      font-size: 13px;
+      min-height: 300px; }
       .pop > .pop-dialog > .pop-output > .pop-main .pop-sidebar {
         *zoom: 1;
         width: 240px;
@@ -241,30 +244,85 @@ body.pop-open {
     opacity: 0.7; }
 
 .pop-button {
-  text-align: center;
   background-color: #a1a1a1;
-  border: 0 none;
-  color: white;
-  display: inline-block;
-  padding: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   -o-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  text-align: center;
+  border: 0 none;
+  color: white;
+  display: inline-block;
+  padding: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none; }
   .pop-button:hover {
     background-color: #888888; }
+  .pop-button.disabled {
+    opacity: 0.7;
+    cursor: default; }
+    .pop-button.disabled:hover {
+      background-color: #a1a1a1; }
+  .pop-button:hover {
+    color: white;
+    text-decoration: none; }
 
 .pop-button-green {
   background-color: #3fa64e; }
   .pop-button-green:hover {
     background-color: #31813d; }
+  .pop-button-green.disabled {
+    opacity: 0.7;
+    cursor: default; }
+    .pop-button-green.disabled:hover {
+      background-color: #3fa64e; }
 
 .pop-button-red {
   background-color: #e33f30; }
   .pop-button-red:hover {
     background-color: #c5291b; }
+  .pop-button-red.disabled {
+    opacity: 0.7;
+    cursor: default; }
+    .pop-button-red.disabled:hover {
+      background-color: #e33f30; }
+
+.pop-button-yellow {
+  background-color: #e3cf34; }
+  .pop-button-yellow:hover {
+    background-color: #c8b51c; }
+  .pop-button-yellow.disabled {
+    opacity: 0.7;
+    cursor: default; }
+    .pop-button-yellow.disabled:hover {
+      background-color: #e3cf34; }
+
+.pop-button-blue {
+  background-color: #58acb5; }
+  .pop-button-blue:hover {
+    background-color: #438f97; }
+  .pop-button-blue.disabled {
+    opacity: 0.7;
+    cursor: default; }
+    .pop-button-blue.disabled:hover {
+      background-color: #58acb5; }
+
+.pop-button-white {
+  color: #999999;
+  padding: 6px;
+  border: 2px solid #bfbfbf;
+  background-color: white; }
+  .pop-button-white:hover {
+    color: #999999;
+    background-color: white;
+    border: 2px solid #8c8c8c; }

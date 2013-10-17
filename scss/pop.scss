@@ -113,6 +113,8 @@
           }
 
           .pop-body {
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
             width: 660px;
           }
         }
@@ -159,6 +161,7 @@
 
       > .pop-main {
         font-size: $body-font-size;
+        min-height: 300px;
 
         .pop-sidebar {
           @include clearfix;
@@ -251,38 +254,66 @@ body.pop-open {
   }
 }
 
+@mixin pop-button($bg){
+  background-color: $bg;
+  &:hover {
+    background-color: darken($bg, 10%);
+  }
+  &.disabled {
+    opacity: 0.7;
+    cursor: default;
+
+    &:hover {
+      background-color: $bg;
+    }
+  }
+}
+
 .pop-button {
+  @include pop-button($button-bg);
+  @include disable-text-selection;
+  @include transition(background-color 0.1s linear);
+  @include border-radius(4px);
   text-align: center;
-  background-color: $button-bg;
   border: 0 none;
   color: $button-text;
   display: inline-block;
   padding: 8px;
   font-weight: bold;
   text-transform: uppercase;
-  -webkit-transition: background-color 0.1s linear;
-     -moz-transition: background-color 0.1s linear;
-       -o-transition: background-color 0.1s linear;
-          transition: background-color 0.1s linear;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  text-decoration: none;
 
   &:hover {
-    background-color: darken($button-bg, 10%);
+    color: $button-text;
+    text-decoration: none;
   }
 }
 
 .pop-button-green {
-  background-color: $button-bg-green;
-  &:hover {
-    background-color: darken($button-bg-green, 10%);
-  }
+  @include pop-button($button-bg-green);
 }
 
 .pop-button-red {
-  background-color: $button-bg-red;
+  @include pop-button($button-bg-red);
+}
+
+.pop-button-yellow {
+  @include pop-button($button-bg-yellow);
+}
+
+.pop-button-blue {
+  @include pop-button($button-bg-blue);
+}
+
+.pop-button-white {
+  color: $text-faded;
+  padding: 6px;
+  border: 2px solid lighten($text-faded, 15%);
+  background-color: $background-light;
+
   &:hover {
-    background-color: darken($button-bg-red, 10%);
+    color: $text-faded;
+    background-color: $background-light;
+    border: 2px solid darken($text-faded, 5%);
   }
 }

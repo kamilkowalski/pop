@@ -57,7 +57,7 @@
         .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td {
           padding-bottom: 20px;
           padding-top: 20px; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td > div.pop-main-eventname {
+          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody > tr td div.pop-main-eventname {
             color: #c0493f;
             padding-left: 20px;
             padding-right: 20px;
@@ -131,23 +131,8 @@
         .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons {
           text-align: right; }
           .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons > a {
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            line-height: 17px;
-            color: #ffffff;
-            font-weight: bold;
-            width: 94px;
-            display: inline-block;
-            text-align: center;
-            margin-bottom: 10px;
-            cursor: pointer; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-regbutton {
-            background: #82ca77; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-partbutton {
-            background: #58acb5; }
-          .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more > td.pop-main-more-buttons a.pop-main-occbutton {
-            background: #58acb5; }
+            width: 102px;
+            margin-bottom: 10px; }
         .pop > .pop-dialog > .pop-output .pop-calendar.active table.timeline > tbody tr.pop-main-more td.pop-main-more-desc {
           padding-left: 20px;
           padding-right: 20px;
@@ -232,8 +217,6 @@
 
 .pop > .pop-dialog > .pop-output > .pop-myevents {
   *zoom: 1;
-  padding-left: 20px;
-  padding-right: 20px;
   overflow-y: auto;
   height: 100%;
   white-space: visible;
@@ -243,5 +226,35 @@
     display: table; }
   .pop > .pop-dialog > .pop-output > .pop-myevents:after {
     clear: both; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents tr:first-child td {
+    border-top: 0 none; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents tr:hover td {
+    background-color: transparent; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents td.right {
+    text-align: right; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents td.pop-main-more .pop-button,
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents td.pop-main-pay .pop-button {
+    display: block; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents td.pop-main-more {
+    width: 140px; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents td.pop-main-pay {
+    width: 80px; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents tr.pop-main-more.active {
+    display: table-row; }
+    .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents tr.pop-main-more.active td {
+      border-top: 0 none; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents tr.pop-main-more {
+    border-top: 0px;
+    display: none;
+    position: relative; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents .pop-main-eventname {
+    color: #c0493f;
+    font-weight: bold; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents .pop-main-cat {
+    font-size: 11px;
+    color: #737373; }
+  .pop > .pop-dialog > .pop-output > .pop-myevents table.myevents .pop-main-date {
+    font-weight: bold;
+    white-space: nowrap; }
 .pop > .pop-dialog > .pop-output .pop-calendar.active {
   display: block; }

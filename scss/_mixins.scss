@@ -47,3 +47,25 @@
     }
   }
 }
+
+@mixin disable-text-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin transition($vars...){
+  -webkit-transition: $vars;
+     -moz-transition: $vars;
+       -o-transition: $vars;
+          transition: $vars;
+}
+
+@mixin border-radius($vars...){
+  -webkit-border-radius: $vars;
+     -moz-border-radius: $vars;
+          border-radius: $vars;
+}
