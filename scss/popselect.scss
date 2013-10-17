@@ -1,0 +1,59 @@
+@import "variables";
+@import "mixins";
+
+.popselect {
+  @include clearfix;
+  position: relative;
+  border: 1px solid $background-body-dark;
+  display: inline-block;
+
+  > * {
+    float: left;
+  }
+
+  .popselect-display,
+  .popselect-hande {
+    @include box-sizing(border-box);
+    height: 30px;
+  }
+
+  .popselect-display {
+    min-width: 150px;
+    padding: 4px 8px;
+    cursor: default;
+  }
+
+  .popselect-handle {
+    display: block;
+    background-color: $background-body-dark;
+    width: 30px;
+    height: 30px;
+  }
+
+  .popselect-dropdown {
+    @include box-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+    @include border-radius(0 0 4px 4px);
+    @include box-sizing(border-box);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    background-color: $background-light;
+    border: 1px solid $background-body-dark;
+    top: 30px;
+    color: $text-dark;
+    font-size: 13px;
+    min-width: 150px;
+    display: none;
+
+    li {
+      padding: 4px 8px;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        background-color: $background-body-dark;
+      }
+    }
+  }
+}

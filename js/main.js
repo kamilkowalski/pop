@@ -29,3 +29,5 @@ $(document.body).on("click", ".pop .dTreeNode", function(){
     node.addClass("chosen");
   }
 });
+
+$("[data-popselect]").popselect();

@@ -9,6 +9,7 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/pop.css">
+        <link rel="stylesheet" href="css/popselect.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/demo.css">
  
@@ -25,6 +26,16 @@
         <h1>Pop</h1>
         <p>This is the new WebOrg modal/popup plugin that will be used on the front page of every WebOrg instance.</p>
         <p>The usage is pretty simple and requires minimal configuration. There are several ways of opening a new modal and adding content to it.</p>
+
+        
+        <h2>Fancy select box: $.fn.popselect</h2>
+
+        <select id="popselect-test" name="category" data-popselect="true">
+            <option value="0">Select category</option>
+            <option value="1">Football</option>
+            <option value="2">Handball</option>
+            <option value="3" selected="selected">Quiddich</option>
+        </select>
 
         <h2>Pre-rendered modal, triggered via JavaScript</h2>
 
@@ -200,6 +211,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         
         <script src="js/jquery.pop.js"></script>
+        <script src="js/jquery.popselect.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript" src="sh/scripts/shCore.js"></script>

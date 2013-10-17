@@ -69,3 +69,8 @@
      -moz-border-radius: $vars;
           border-radius: $vars;
 }
+
+@mixin box-sizing($type){
+  -moz-box-sizing: $type;
+       box-sizing: $type;
+}
