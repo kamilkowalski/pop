@@ -18,7 +18,7 @@
       // Set up the elements
       var ps = $("<div>", {"class": "popselect"});
       var display = $("<div>", {"class": "popselect-display"});
-      var handle = $("<a>", {href: "#", "class": "popselect-handle"});
+      var handle = $("<a>", {href: "#", "class": "popselect-handle"}).append($("<i>"));
       var dropdown = $("<ul>", {"class": "popselect-dropdown"});
 
       // Append the new select
@@ -40,7 +40,7 @@
       // Set up events
       handle.add(display).on("click", function(e){
         e.preventDefault();
-        dropdown.slideToggle(100);
+        dropdown.slideToggle(50);
         ps.toggleClass("active");
       });
 
@@ -49,7 +49,15 @@
         that.trigger("change");
         display.text($(this).text());
         $(this).siblings().removeClass("active").end().addClass("active");
-        dropdown.slideUp(100);
+        dropdown.slideUp(50);
+        ps.removeClass("active");
+      });
+
+      $(document).on("click", function(e){
+        if(!ps.is(e.target) && ps.has(e.target).length == 0){
+          dropdown.slideUp(50);
+          ps.removeClass("active");
+        }
       });
 
       that.on("change", function(){

@@ -3,12 +3,21 @@
 
 .popselect {
   @include clearfix;
+  @include border-radius(3px);
   position: relative;
-  border: 1px solid $background-body-dark;
+  border: 1px solid $popselect-border;
   display: inline-block;
 
   > * {
     float: left;
+  }
+
+  &:hover {
+    border: 1px solid darken($popselect-border, 10%);
+
+    .popselect-handle {
+      border-left: 1px solid darken($popselect-border, 10%);
+    }
   }
 
   .popselect-display,
@@ -18,16 +27,28 @@
   }
 
   .popselect-display {
+    @include box-shadow(inset 1px 1px 2px rgba(0, 0, 0, 0.1));
     min-width: 150px;
     padding: 4px 8px;
     cursor: default;
+    font-size: 14px;
+    line-height: 22px;
   }
 
   .popselect-handle {
     display: block;
-    background-color: $background-body-dark;
+    background: $popselect-handle-bg url(images/handle-bg.png) 0 0 repeat-x scroll;
+    border-left: 1px solid $popselect-border;
     width: 30px;
     height: 30px;
+
+    i {
+      background: transparent url(images/handle-arrow.png) center center no-repeat scroll;
+      display: block;
+      height: 6px;
+      width: 9px;
+      margin: 12px auto;
+    }
   }
 
   .popselect-dropdown {
@@ -39,20 +60,20 @@
     list-style: none;
     position: absolute;
     background-color: $background-light;
-    border: 1px solid $background-body-dark;
+    border: 1px solid darken($popselect-border, 10%);
     top: 30px;
-    color: $text-dark;
     font-size: 13px;
     min-width: 150px;
     display: none;
 
     li {
+      @include transition(background-color 0.1s linear);
       padding: 4px 8px;
       cursor: pointer;
 
       &:hover,
       &.active {
-        background-color: $background-body-dark;
+        background-color: darken($background-light, 5%);
       }
     }
   }
