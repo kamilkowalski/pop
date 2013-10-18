@@ -33,22 +33,23 @@
     padding: 4px 8px;
     cursor: default;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 26px;
+    height: 32px;
   }
 
   .popselect-handle {
     display: block;
     background: $popselect-handle-bg url(images/handle-bg.png) 0 0 repeat-x scroll;
     border-left: 1px solid $popselect-border;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 
     i {
       background: transparent url(images/handle-arrow.png) center center no-repeat scroll;
       display: block;
       height: 6px;
       width: 9px;
-      margin: 12px auto;
+      margin: 14px auto;
     }
   }
 
@@ -62,7 +63,7 @@
     position: absolute;
     background-color: $background-light;
     border: 1px solid darken($popselect-border, 10%);
-    top: 30px;
+    top: 32px;
     font-size: 13px;
     min-width: 150px;
     display: none;

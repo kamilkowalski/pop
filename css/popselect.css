@@ -31,19 +31,20 @@
     padding: 4px 8px;
     cursor: default;
     font-size: 14px;
-    line-height: 22px; }
+    line-height: 26px;
+    height: 32px; }
   .popselect .popselect-handle {
     display: block;
     background: #e6e6e6 url(images/handle-bg.png) 0 0 repeat-x scroll;
     border-left: 1px solid #d4d4d4;
-    width: 30px;
-    height: 30px; }
+    width: 32px;
+    height: 32px; }
     .popselect .popselect-handle i {
       background: transparent url(images/handle-arrow.png) center center no-repeat scroll;
       display: block;
       height: 6px;
       width: 9px;
-      margin: 12px auto; }
+      margin: 14px auto; }
   .popselect .popselect-dropdown {
     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
@@ -59,7 +60,7 @@
     position: absolute;
     background-color: white;
     border: 1px solid #bbbbbb;
-    top: 30px;
+    top: 32px;
     font-size: 13px;
     min-width: 150px;
     display: none; }
