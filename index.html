@@ -30,12 +30,59 @@
         
         <h2>Fancy select box: $.fn.popselect</h2>
 
-        <select id="popselect-test" name="category" data-popselect="true">
+        <select name="category" data-popselect="true">
             <option value="0">Select category</option>
             <option value="1">Football</option>
             <option value="2">Handball</option>
             <option value="3" selected="selected">Quiddich</option>
         </select>
+
+        <h3>HTML:</h3>
+        <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+        <select id="popselect" name="category" data-popselect="true">
+            <option value="0">Select category</option>
+            <option value="1">Football</option>
+            <option value="2">Handball</option>
+            <option value="3" selected="selected">Quiddich</option>
+        </select>
+        </script>
+
+        <h3>JavaScript:</h3>
+        <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+        // JavaScript
+        // SELECT boxes with [data-popselect] are handled automatically
+
+        // In case you need to use it manually:
+        
+        $("#popselect").popselect();
+        ]]></script>
+
+        <h3>Demo:</h3>
+        <button id="showPop1">Show it</button>
+
+        <div class="pop" id="myPop1">
+            <div class="pop-dialog">
+                <div class="pop-head">
+                    <div class="pop-title">Title</div>
+                    <a href="#" class="pop-close" data-close="true">&times;</a>
+                    <ul class="pop-menu">
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                    </ul>
+                </div>
+                <div class="pop-output">
+                    <ul class="pop-submenu">
+                        <li class="active"><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                    </ul>
+                    <div class="pop-main">
+                        <div class="pop-body">
+                            Main body
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <h2>Pre-rendered modal, triggered via JavaScript</h2>
 
@@ -99,110 +146,6 @@
                             Main body
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <h2>AJAX-loaded content: Message center</h2>
-        
-        <h3>HTML:</h3>
-        <script type="syntaxhighlighter" class="brush: html"><![CDATA[
-        <button id="showPop2">Load it</button>
-
-        <div class="pop" id="myPop2">
-            <div class="pop-dialog">
-                <div class="pop-head">
-                    <div class="pop-title">Title</div>
-                    <a href="#" class="pop-close" data-close="true">&times;</a>
-                    <ul class="pop-menu">
-                        <li><a href="#">Menu 1</a></li>
-                        <li><a href="#">Menu 2</a></li>
-                    </ul>
-                </div>
-                <div class="pop-output">
-                    
-                </div>
-            </div>
-        </div>
-        </script>
-
-        <h3>JavaScript:</h3>
-        <script type="syntaxhighlighter" class="brush: js"><![CDATA[
-        // JavaScript
-        $("#showPop2").on("click", function(){
-            $("#myPop2").pop("show", {load: "ajax_contents.html"});
-        });
-        ]]></script>
-
-        <h3>Demo:</h3>
-        <button id="showPop2">Load it</button>
-
-        <div class="pop pop-flex" id="myPop2">
-            <div class="pop-dialog">
-                <div class="pop-head">
-                    <div class="pop-title">Title</div>
-                    <a href="#" class="pop-close" data-close="true">&times;</a>
-                    <ul class="pop-menu">
-                        <li><a href="#">Menu 1</a></li>
-                        <li><a href="#">Menu 2</a></li>
-                    </ul>
-                </div>
-                <div class="pop-output">
-                    
-                </div>
-            </div>
-        </div>
-
-        <h2>AJAX-loaded content: Calendar</h2>
-        
-        <h3>HTML:</h3>
-        <script type="syntaxhighlighter" class="brush: html"><![CDATA[
-        <button id="showPop3">Load it</button>
-
-        <div class="pop" id="myPop3">
-            <div class="pop-dialog">
-                <div class="pop-head">
-                    <div class="pop-title">Title</div>
-                    <a href="#" class="pop-close" data-close="true">&times;</a>
-                    <ul class="pop-menu">
-                        <li><a href="#">Min kalender</a></li>
-                        <li><a href="#">Mine medlemskap</a></li>
-                        <li><a href="#">Innstillinger</a></li>
-                        <li><a href="#">Payment</a></li>
-                    </ul>
-                </div>
-                <div class="pop-output">
-                    
-                </div>
-            </div>
-        </div>
-        </script>
-
-        <h3>JavaScript:</h3>
-        <script type="syntaxhighlighter" class="brush: js"><![CDATA[
-        // JavaScript
-        $("#showPop3").on("click", function(){
-            $("#myPop3").pop("show", {load: "ajax_calendar.html"});
-        });
-        ]]></script>
-
-        <h3>Demo:</h3>
-        <button id="showPop3">Load it</button>
-
-        <div class="pop pop-flex" id="myPop3">
-            <div class="pop-dialog">
-                <div class="pop-head">
-                    <div class="pop-title">Title</div>
-                    <a href="#" class="pop-close" data-close="true">&times;</a>
-                    <ul class="pop-menu">
-                        <li><a href="#">Min kalender</a></li>
-                        <li><a href="#">Mine medlemskap</a></li>
-                        <li><a href="#">Innstillinger</a></li>
-                        <li><a href="#">Payment</a></li>
-                    </ul>
-                </div>
-                <div class="pop-output">
-                    
                 </div>
             </div>
         </div>
