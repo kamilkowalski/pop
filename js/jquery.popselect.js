@@ -68,4 +68,6 @@
       updatePopselect(that, display, dropdown);
     });
   }
+
+  $("[data-popselect]").popselect();
 })(jQuery);
