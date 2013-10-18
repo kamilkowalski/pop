@@ -7,6 +7,7 @@
   position: relative;
   border: 1px solid $popselect-border;
   display: inline-block;
+  border-spacing: 0 0;
 
   > * {
     float: left;
