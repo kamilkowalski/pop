@@ -78,5 +78,9 @@
         background-color: darken($background-light, 5%);
       }
     }
+
+    li:last-child {
+      @include border-radius(0 0 4px 4px);
+    }
   }
 }

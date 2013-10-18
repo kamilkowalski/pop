@@ -73,3 +73,7 @@
       cursor: pointer; }
       .popselect .popselect-dropdown li:hover, .popselect .popselect-dropdown li.active {
         background-color: #f2f2f2; }
+    .popselect .popselect-dropdown li:last-child {
+      -webkit-border-radius: 0 0 4px 4px;
+      -moz-border-radius: 0 0 4px 4px;
+      border-radius: 0 0 4px 4px; }
