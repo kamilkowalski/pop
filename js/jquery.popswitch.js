@@ -5,14 +5,14 @@
 
       if(!that.data("wo.popswitch")){
 
-        var options = $.extend({t: "On", f: "Off"}, that.data());
+        var options = $.extend({on: "On", off: "Off"}, that.data());
 
         // Set up the elements
         var ps = $("<div>", {"class": "popswitch"});
         var slider = $("<div>", {"class": "popswitch-slider"});
         var handle = $("<div>", {"class": "popswitch-handle"}).append($("<i>"));
-        var textTrue = $("<span>", {"class": "popswitch-text"}).text(options.t);
-        var textFalse = $("<span>", {"class": "popswitch-text"}).text(options.f);
+        var textTrue = $("<span>", {"class": "popswitch-text"}).text(options.on);
+        var textFalse = $("<span>", {"class": "popswitch-text"}).text(options.off);
 
         // Append the new switch
         slider.append(textFalse, handle, textTrue);
