@@ -139,7 +139,19 @@
 
   $(document).on("click", ".pop a[data-remote]", function(e){
     e.preventDefault();
-    $.ajax($(this).attr("href"));
+    var link = $(this);
+
+    $.ajax(link.attr("href"), {
+      success: function(data, status, jqxhr){
+        link.trigger("pop:success", [data, status, jqxhr]);
+      },
+      complete: function(jqxhr, status){
+        link.trigger("pop:complete", [jqxhr, status]);
+      },
+      error: function(jqxhr, status, error){
+        link.trigger("pop:error", [jqxhr, status, error]);
+      }
+    });
   });
 
   $(document).on("submit", ".pop form[data-remote]", function(e){
