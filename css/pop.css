@@ -265,7 +265,8 @@ body.pop-open {
   padding: 8px;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  line-height: 20px; }
   .pop-button:hover {
     background-color: #888888; }
   .pop-button.disabled {
