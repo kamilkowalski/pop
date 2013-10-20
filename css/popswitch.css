@@ -1,0 +1,68 @@
+.popswitch {
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+  width: 70px;
+  height: 30px;
+  overflow: hidden;
+  display: inline-block;
+  background-color: #b3b3b3;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle; }
+  .popswitch.on {
+    background-color: #50c75d; }
+  .popswitch > * {
+    height: 30px; }
+
+.popswitch-slider {
+  *zoom: 1;
+  -webkit-transition: left 0.1s ease-in;
+  -moz-transition: left 0.1s ease-in;
+  -o-transition: left 0.1s ease-in;
+  transition: left 0.1s ease-in;
+  width: 108px;
+  position: absolute;
+  left: 0; }
+  .popswitch-slider:before, .popswitch-slider:after {
+    content: " ";
+    display: table; }
+  .popswitch-slider:after {
+    clear: both; }
+  .popswitch-slider > * {
+    height: 30px;
+    float: left; }
+
+.popswitch.on .popswitch-slider {
+  left: -38px; }
+
+.popswitch-handle {
+  width: 32px; }
+  .popswitch-handle i {
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    background: transparent url("images/popswitch-handle.png") 0 0 repeat-x scroll;
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px; }
+
+.popswitch-text {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  display: block;
+  width: 38px;
+  text-align: center;
+  color: #757575;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 30px; }
+
+.popswitch.on .popswitch-text {
+  color: white; }

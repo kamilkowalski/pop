@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/pop.css">
         <link rel="stylesheet" href="css/popselect.css">
+        <link rel="stylesheet" href="css/popswitch.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/demo.css">
  
@@ -27,8 +28,32 @@
         <p>This is the new WebOrg modal/popup plugin that will be used on the front page of every WebOrg instance.</p>
         <p>The usage is pretty simple and requires minimal configuration. There are several ways of opening a new modal and adding content to it.</p>
 
+        <h2>On/off switch for checkboxes</h2>
+
+        <h3>Demo:</h3>
+
+        <label for="recieve_newsletter">Recieve newsletter</label>
+        <input type="checkbox" id="recieve_newsletter" name="receive_newsletter" data-popswitch="true" data-yes="Yup" data-no="Nah" />
+
+        <h3>HTML:</h3>
+
+        <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+        <label for="recieve_newsletter">Recieve newsletter</label> <input type="checkbox" id="recieve_newsletter" name="receive_newsletter" data-popswitch="true" />
+        </script>
+
+        <h3>JavaScript:</h3>
+        <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+        // JavaScript
+        // INPUT[TYPE="CHECKBOX"] inputs with [data-popswitch] are handled automatically
+
+        // In case you need to use it manually:
         
+        $("#recieve_newsletter").popswitch();
+        ]]></script>
+
         <h2>Fancy select box: $.fn.popselect</h2>
+
+        <h3>Demo:</h3>
 
         <select name="category" data-popselect="true">
             <option value="0">Select category</option>
@@ -57,6 +82,8 @@
         $("#popselect").popselect();
         ]]></script>
 
+        <h2>Pre-rendered modal, triggered via JavaScript</h2>
+
         <h3>Demo:</h3>
         <button id="showPop1">Show it</button>
 
@@ -83,8 +110,6 @@
                 </div>
             </div>
         </div>
-
-        <h2>Pre-rendered modal, triggered via JavaScript</h2>
 
         <h3>HTML:</h3>
         <script type="syntaxhighlighter" class="brush: html"><![CDATA[
@@ -119,42 +144,16 @@
         <script type="syntaxhighlighter" class="brush: js"><![CDATA[
         // JavaScript
         $("#showPop1").on("click", function(){
-            $("#myPop1").pop("show");
+            $("#myPop1").pop({html: "<div class=\"pop-main\"><div class=\"pop-body\">This is the real body!</div></div>", title: "Real title"});
         });
         ]]></script>
-
-        <h3>Demo:</h3>
-        <button id="showPop1">Show it</button>
-
-        <div class="pop" id="myPop1">
-            <div class="pop-dialog">
-                <div class="pop-head">
-                    <div class="pop-title">Title</div>
-                    <a href="#" class="pop-close" data-close="true">&times;</a>
-                    <ul class="pop-menu">
-                        <li><a href="#">Menu 1</a></li>
-                        <li><a href="#">Menu 2</a></li>
-                    </ul>
-                </div>
-                <div class="pop-output">
-                    <ul class="pop-submenu">
-                        <li class="active"><a href="#">Submenu 1</a></li>
-                        <li><a href="#">Submenu 2</a></li>
-                    </ul>
-                    <div class="pop-main">
-                        <div class="pop-body">
-                            Main body
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         
         <script src="js/jquery.pop.js"></script>
         <script src="js/jquery.popselect.js"></script>
+        <script src="js/jquery.popswitch.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript" src="sh/scripts/shCore.js"></script>

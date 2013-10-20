@@ -1,0 +1,75 @@
+@import "variables";
+@import "mixins";
+
+$switch-width: 70px;
+$switch-height: 30px;
+$handle-width: 32px;
+$text-width: $switch-width - $handle-width;
+$slider-width: 2 * $text-width + $handle-width;
+
+.popswitch {
+  @include transition(background-color 0.1s linear);
+  width: $switch-width;
+  height: $switch-height;
+  overflow: hidden;
+  display: inline-block;
+  background-color: $popswitch-bg-off;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+
+  &.on {
+    background-color: $popswitch-bg-on;
+  }
+
+  > * {
+    height: $switch-height;
+  }
+}
+
+.popswitch-slider {
+  @include clearfix;
+  @include transition(left 0.1s ease-in);
+  width: $slider-width;
+  position: absolute;
+  left: 0;
+
+  > * {
+    height: $switch-height;
+    float: left;
+  }
+}
+
+.popswitch.on .popswitch-slider {
+  left: $switch-width - $slider-width;
+}
+
+.popswitch-handle {
+  width: $handle-width;
+  
+  i {
+    @include box-shadow(0 0 1px rgba(0, 0, 0, 0.3));
+    background: transparent url("images/popswitch-handle.png") 0 0 repeat-x scroll;
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: ($switch-height - 20px) / 2;
+  }
+}
+
+.popswitch-text {
+  @include transition(color 0.1s linear);
+  display: block;
+  width: $text-width;
+  text-align: center;
+  color: $popswitch-color-off;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: $switch-height;
+}
+
+.popswitch.on .popswitch-text {
+  color: $popswitch-color-on;
+}

@@ -2,14 +2,6 @@ $("#showPop1").on("click", function(){
   $("#myPop1").pop({html: "<div class=\"pop-main\"><div class=\"pop-body\">This is the real body!</div></div>", title: "Real title"});
 });
 
-$("#showPop2").on("click", function(){
-  $("#myPop2").pop({load: "ajax_contents.html"});
-});
-
-$("#showPop3").on("click", function(){
-  $("#myPop3").pop({load: "ajax_calendar.html"});
-});
-
 $(document.body).on("click", ".pop a.btn-pop-more", function(e){
   e.preventDefault();
   $(this).closest("tr").next().toggleClass("active");
