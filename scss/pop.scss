@@ -165,7 +165,9 @@
 
         .pop-sidebar {
           @include clearfix;
+          height: 100%;
           width: 240px;
+          overflow-y: auto;
           float: left;
           background: $background-body;
           direction: rtl;
