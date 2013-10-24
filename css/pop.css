@@ -268,7 +268,8 @@ body.pop-open {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 20px; }
+  line-height: 20px;
+  cursor: pointer; }
   .pop-button:hover {
     background-color: #888888; }
   .pop-button.disabled {

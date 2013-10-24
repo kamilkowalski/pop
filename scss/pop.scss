@@ -285,6 +285,7 @@ body.pop-open {
   text-transform: uppercase;
   text-decoration: none;
   line-height: 20px;
+  cursor: pointer;
 
   &:hover {
     color: $button-text;
