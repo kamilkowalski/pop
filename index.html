@@ -28,6 +28,67 @@
         <p>This is the new WebOrg modal/popup plugin and widgets gallery that will be used in the members area of WebOrg.</p>
         <p>The usage is pretty simple and requires minimal configuration. The examples provide basic info, for more configuration variables refer to the source.</p>
 
+        <h2>Confirm dialog on link click</h2>
+
+        <h3>Demo:</h3>
+        
+        <button id="showPop2">Show it</button>
+
+        <div class="pop" id="myPop2">
+            <div class="pop-dialog">
+                <div class="pop-head">
+                    <div class="pop-title">Title</div>
+                    <a href="#" class="pop-close" data-close="true">&times;</a>
+                    <ul class="pop-menu">
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                    </ul>
+                </div>
+                <div class="pop-output">
+                    <div class="pop-main">
+                        <div class="pop-body">
+                            <a href="http://youtu.be/kfVsfOSbJY0" data-confirm="Are you sure you want to destroy the universe?">Destroy the universe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>HTML:</h3>
+
+        <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+        <button id="showPop2">Show it</button>
+
+        <div class="pop" id="myPop2">
+            <div class="pop-dialog">
+                <div class="pop-head">
+                    <div class="pop-title">Title</div>
+                    <a href="#" class="pop-close" data-close="true">&times;</a>
+                    <ul class="pop-menu">
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                    </ul>
+                </div>
+                <div class="pop-output">
+                    <div class="pop-main">
+                        <div class="pop-body">
+                            <a href="http://youtu.be/kfVsfOSbJY0" data-confirm="Are you sure you want to destroy the universe?">Destroy the universe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </script>
+
+        <h3>JavaScript:</h3>
+        <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+        $("#showPop2").on("click", function(e){
+            $("#myPop2").pop();
+        });
+
+        // Other than that - none, the [data-confirm] attribute on links is checked for the whole .pop class
+        ]]></script>
+
         <h2>On/off switch for checkboxes</h2>
 
         <h3>Demo:</h3>

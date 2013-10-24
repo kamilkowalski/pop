@@ -137,6 +137,22 @@
     });
   });
 
+  $(document).on("click", ".pop a[data-confirm]", function(e){
+    var that = $(this);
+    console.log("foo");
+    if(!that.data("confirm")) return true;
+
+    var answer = confirm(that.data("confirm"));
+
+    if(!answer){
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      return false;
+    } else {
+      return true;
+    }
+  });
+
   $(document).on("click", ".pop a[data-remote]", function(e){
     e.preventDefault();
     var link = $(this);
