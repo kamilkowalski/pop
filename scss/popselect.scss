@@ -8,6 +8,7 @@
   border: 1px solid $popselect-border;
   display: inline-block;
   border-spacing: 0 0;
+  vertical-align: middle;
 
   > * {
     float: left;
@@ -65,7 +66,7 @@
     border: 1px solid darken($popselect-border, 10%);
     top: 32px;
     font-size: 13px;
-    min-width: 150px;
+    width: 100%;
     display: none;
     z-index: 1000;
 

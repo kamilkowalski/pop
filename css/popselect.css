@@ -6,7 +6,8 @@
   position: relative;
   border: 1px solid #d4d4d4;
   display: inline-block;
-  border-spacing: 0 0; }
+  border-spacing: 0 0;
+  vertical-align: middle; }
   .popselect:before, .popselect:after {
     content: " ";
     display: table; }
@@ -62,7 +63,7 @@
     border: 1px solid #bbbbbb;
     top: 32px;
     font-size: 13px;
-    min-width: 150px;
+    width: 100%;
     display: none;
     z-index: 1000; }
     .popselect .popselect-dropdown li {
